@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "kudry";
+    src: url("../fonts/Kudry/kudry_weird-headline.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "playfair-light";
+    src: url("../fonts/Playfair/static/Playfair_144pt-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: "playfair-small";
+    src: url("../fonts/Playfair/static/Playfair_144pt-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: "playfair-button";
+    src: url("../fonts/Playfair/static/Playfair_144pt-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+}
+:root {
+    /* Background */
+    --primary-white-smoke: #F3F3F3;
+    --secondary-timberwolf: #E3E0D9;
+    --tertiary-isabelline: #F0EFEA;
+    --quaternary-beige: #E2D8CF;
+    --header-footer-night: #2C2C2C;
+
+    /* Text */
+    --primary-eerie-black: #2C2C2C;
+    --secondary-white-smoke: #F3F3F3;
+    --tertiary-battleship-gray: #4B4B4B 64%;
+    --hover-silver-text: #AAAAAA;
+
+    /* Button */
+    --primary-night: #2C2C2C;
+    --secondary-platinum: #E8E8E8;
+    --hover-golden: #B2895B;
+    --hover-silver-button: #A4A4A4;
+
+    /* Icon */
+    --default-platinum: #E8E8E8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: kudry;
+    font-weight: lighter;
+    line-height: 132%;
+    letter-spacing: 3.2px;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 76px;
+}
+
+h3 {
+    font-size: 64px;
+}
+.container {
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: var(--header-footer-night);
+}
+.header_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_container {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.nav_link {
+    font-family: playfair-light;
+    color: var(--secondary-white-smoke);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 144%;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+}
+.header_button {
+    font-family: playfair-light;
+    color: var(--primary-eerie-black);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 144%;
+    letter-spacing: 0.8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Главная */
+.home {
+    background-color: var(--primary-white-smoke);
+    width: 100%;
+}
