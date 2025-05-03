@@ -26,6 +26,7 @@
     font-weight: normal;
     font-size: 24px;
 }
+
 :root {
     /* Background */
     --primary-white-smoke: #F3F3F3;
@@ -81,16 +82,19 @@ header {
     background-color: var(--header-footer-night);
     padding: 30px 100px;
 }
+
 .header_container {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
+
 .nav_container {
     display: flex;
     align-items: center;
     gap: 28px;
 }
+
 .nav_link {
     font-family: playfair-light;
     color: var(--secondary-white-smoke);
@@ -101,6 +105,7 @@ header {
     letter-spacing: 0.8px;
     text-decoration: none;
 }
+
 .header_button {
     font-family: playfair-light;
     color: var(--primary-eerie-black);
@@ -126,25 +131,64 @@ header {
     grid-template-columns: repeat(2, 50%);
     align-items: center;
 }
+
 .author_container {
     width: 100%;
     display: flex;
     justify-content: end;
 }
+
 .author_page {
     max-width: 320px;
     color: var(--primary-eerie-black);
-    font-family: Playfair;
+    font-family: playfair-light;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
     line-height: 144%; /* 28.8px */
     letter-spacing: 0.8px;
 }
+
 .second_paragraph {
     width: 100%;
     grid-column: span 2;
     display: flex;
     align-items: center;
     justify-content: end;
+}
+
+.home_video {
+    margin: 58px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_video img {
+    width: clamp(75rem, calc(-12.5rem + 100vw), 187.5rem);
+    height: clamp(36.31rem, calc(-6.03rem + 48.39vw), 90.75rem);
+}
+
+.first_description_home_page, .second_description_home_page {
+    color: var(--primary-eerie-black);
+    font-family: playfair-light;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 144%; /* 28.8px */
+    letter-spacing: 0.8px;
+}
+
+.first_description_home_page {
+    width: clamp(59.28rem, calc(0rem + 67.75vw), 135.5rem);
+}
+.description_home_page_container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.second_description_home_page {
+    width: clamp(42.34rem, calc(0rem + 48.39vw), 96.77rem);
 }
