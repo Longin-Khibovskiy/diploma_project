@@ -10,7 +10,6 @@
     <script src="../js/main.js" defer></script>
 </head>
 <body>
-<div class="container">
 <header>
     <div class="header_container">
         <div class="nav_container">

@@ -64,27 +64,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: clamp(5rem, calc(2.08rem + 3.33vw), 8.75rem);
 }
 
 h2 {
-    font-size: 76px;
+    font-size: clamp(4.75rem, calc(2.03rem + 3.11vw), 8.25rem);
 }
 
 h3 {
-    font-size: 64px;
-}
-.container {
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    flex-direction: column;
+    font-size: clamp(4rem, calc(1.86rem + 2.44vw), 6.75rem);
 }
 
 /* Header */
 header {
     width: 100%;
     background-color: var(--header-footer-night);
+    padding: 30px 100px;
 }
 .header_container {
     width: 100%;
@@ -122,4 +117,34 @@ header {
 .home {
     background-color: var(--primary-white-smoke);
     width: 100%;
+    padding: 30px 100px;
+}
+
+.title_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+}
+.author_container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.author_page {
+    max-width: 320px;
+    color: var(--primary-eerie-black);
+    font-family: Playfair;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 144%; /* 28.8px */
+    letter-spacing: 0.8px;
+}
+.second_paragraph {
+    width: 100%;
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
