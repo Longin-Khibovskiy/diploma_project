@@ -100,25 +100,25 @@ foreach ($pagesData as $data) {
 // Мода и коллаборации
 $img_fashion_and_collaboration = [];
 for ($i = 1; $i <= 12; $i++) {
-    $img_fashion_and_collaboration[] = "../images/fashion_and_collaboration/fashion_and_collaboration_$i";
+    $img_fashion_and_collaboration[] = "../images/fashion_and_collaboration/fashion_and_collaboration_$i.png";
 }
 $img_fashion_and_collaborationString = implode(', ', $img_fashion_and_collaboration);
 // Люкс и масс-маркер
 $img_luxury_and_mass_market = [];
 for ($i = 0; $i <= 10; $i++) {
-    $img_luxury_and_mass_market[] = "../images/fashion_and_pop_culture/imagesluxury_and_mass_market-$i";
+    $img_luxury_and_mass_market[] = "../images/fashion_and_pop_culture/imagesluxury_and_mass_market-$i.png";
 }
 $img_luxury_and_mass_marketString = implode(', ', $img_luxury_and_mass_market);
 // Мода и поп культура
 $img_fashion_and_pop_culture = [];
 for ($i = 0; $i <= 10; $i++) {
-    $img_fashion_and_pop_culture[] = "../images/fashion_and_pop_culture/imagesfashion_and_pop_culture-$i";
+    $img_fashion_and_pop_culture[] = "../images/fashion_and_pop_culture/imagesfashion_and_pop_culture-$i.png";
 }
 $img_fashion_and_pop_cultureString = implode(', ', $img_fashion_and_pop_culture);
 ## Коллаборация что?
 $img_collaboration_what = [];
 for ($i = 4; $i >= 0; $i--) {
-    $img_collaboration_what[] = "../images/home_articles_images/collaboration_what/imagescollaboration_what-$i";
+    $img_collaboration_what[] = "../images/home_articles_images/collaboration_what/imagescollaboration_what-$i.png";
 }
 $img_collaboration_whatString = implode(', ', $img_collaboration_what);
 ## Данные
