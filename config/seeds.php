@@ -58,6 +58,21 @@ if ($conn->query($sql) === TRUE) {
     die("Ошибка создания таблицы articles: " . $conn->error);
 }
 
+## Создание таблицы HomeArticles
+$sql = "CREATE TABLE IF NOT EXISTS HomeArticles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    author VARCHAR(255),
+    description TEXT,
+    images TEXT
+)";
+if ($conn->query($sql) === TRUE) {
+    echo "Таблица 'HomeArticles' создана успешно.\n";
+} else {
+    die("Ошибка создания таблицы HomeArticles: " . $conn->error);
+}
+
+
 ## Вставляем данные в таблицу pages
 $pagesData = [
     ['Главная', 'Коллаборации изменившие мир моды', 'http://localhost/'],
@@ -100,7 +115,12 @@ for ($i = 0; $i <= 10; $i++) {
     $img_fashion_and_pop_culture[] = "../images/fashion_and_pop_culture/imagesfashion_and_pop_culture-$i";
 }
 $img_fashion_and_pop_cultureString = implode(', ', $img_fashion_and_pop_culture);
-
+## Коллаборация что?
+$img_collaboration_what = [];
+for ($i = 4; $i >= 0; $i--) {
+    $img_collaboration_what[] = "../images/home_articles_images/collaboration_what/imagescollaboration_what-$i";
+}
+$img_collaboration_whatString = implode(', ', $img_collaboration_what);
 ## Данные
 $articlesDataFashionCollaboration = [
     [
@@ -126,6 +146,15 @@ $articlesDataFashionCollaboration = [
     ]
 ];
 
+$CollaborationWhatData = [
+    [
+        'Коллаборации… что?',
+        '',
+        'Так кто же начал этот марафон коллабов и задал тренд на многие десятилетия вперёд?/В 30-е годы Сальвадор Дали и Эльза Скьяпарелли совершили первую в истории моды коллаборацию между художником и кутюрье. По легенде знакомства их произошло так…/Сальвадор Дали сказал «Вы одеваетесь в стиле моих картин», на что она ответила «Нет, это вы пишете картины в стиле моих платьев». Ну а потом все и случилось./В результате их сотрудничества появились знаковые и скандальные вещи, включая «Пудреницу в виде циферблата» в 1935 году. В 1936 году был создан платье «слезы», а в 1937 году — культовая шляпа-туфелька и знаменитое платье с изображением лобстера, которое носила герцогиня Уоллес Симпсон.',
+        $img_collaboration_whatString
+    ]
+];
+
 foreach ($articlesDataFashionCollaboration as $data) {
     $name = $conn->real_escape_string($data[0]);
     $author = $conn->real_escape_string($data[1]);
@@ -141,6 +170,18 @@ foreach ($articlesDataFashionCollaboration as $data) {
     }
 }
 
-echo "Все операции выполнены успешно!\n";
+foreach ($CollaborationWhatData as $data) {
+    $title = $conn->real_escape_string($data[0]);
+    $author = $conn->real_escape_string($data[1]);
+    $description = $conn->real_escape_string($data[2]);
+    $images = $conn->real_escape_string($data[3]);
+
+    $sql = "INSERT INTO HomeArticles (title, author, description, images) VALUES ('$title', '$author', '$description', '$images')";
+
+    if (!$conn->query($sql)) {
+        echo "Ошибка вставки в articles: " . $conn->error . "\n";
+    }
+}
+
 $conn->close();
 ?>

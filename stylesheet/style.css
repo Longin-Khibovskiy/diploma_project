@@ -182,6 +182,7 @@ header {
 .first_description_home_page {
     width: clamp(59.28rem, calc(0rem + 67.75vw), 135.5rem);
 }
+
 .description_home_page_container {
     margin-top: 20px;
     width: 100%;
@@ -189,6 +190,7 @@ header {
     align-items: center;
     justify-content: end;
 }
+
 .second_description_home_page {
     width: clamp(42.34rem, calc(0rem + 48.39vw), 96.77rem);
 }
