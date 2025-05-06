@@ -152,4 +152,24 @@
             </div>
         </div>
     </div>
+    <div class="sec_lux">
+        <div class="sec_lux_first_container">
+            <div class="sec_lux_first_text_container">
+                <?php foreach (array_slice($descriptionParts, 2, 3) as $part) : ?>
+                    <p class="sec_lux_first_text"><?= $part ?></p>
+                <?php endforeach ?>
+            </div>
+            <!-- Тут будет слайдер -->
+            <img src="<?= $imagesParts[6] ?>" alt="" class="sec_lux_first_img">
+        </div>
+        <div class="sec_lux_second_container">
+            <!-- Тут будет слайдер -->
+            <img src="<?= $imagesParts[14] ?>" alt="" class="sec_lux_second_img">
+            <div class="sec_lux_second_text_container">
+                <?php foreach (array_slice($descriptionParts, 5, 2) as $part) : ?>
+                    <p class="sec_lux_second_text"><?= $part ?></p>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </div>
 </section>

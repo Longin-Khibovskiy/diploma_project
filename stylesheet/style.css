@@ -88,6 +88,7 @@ p {
     line-height: 144%; /* 28.8px */
     letter-spacing: 0.8px;
 }
+
 /* Width containers */
 .width_container_timberwolf {
     width: 100%;
@@ -102,6 +103,7 @@ p {
     display: flex;
     justify-content: center;
 }
+
 /* Header */
 header {
     width: 100%;
@@ -438,6 +440,7 @@ header {
 .house_last_container img {
     height: 380px;
 }
+
 .lux {
     width: 100%;
     max-width: 1600px;
@@ -453,10 +456,10 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+
 .lux_title_container p {
     max-width: 280px;
 }
-
 
 
 .lux_history_container {
@@ -465,15 +468,18 @@ header {
     display: flex;
     gap: 40px;
 }
+
 .lux_history_left_container {
     display: flex;
     flex-direction: column;
     gap: 60px;
 }
+
 .lux_history_left_img_container {
     display: flex;
     gap: 40px;
 }
+
 .lux_three_container {
     margin-top: 120px;
     width: 100%;
@@ -490,8 +496,47 @@ header {
     align-items: end;
 }
 
+.sec_lux {
+    width: 100%;
+    max-width: 1600px;
+    padding: 140px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.sec_lux_first_container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
 
+.sec_lux_first_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sec_lux_first_img {
+    height: 400px;
+}
+
+.sec_lux_second_container {
+    margin-top: 92px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.sec_lux_second_img {
+    height: 400px;
+}
+
+.sec_lux_second_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
 /* Buttons */
 .link_for_button {
@@ -539,6 +584,7 @@ header {
     letter-spacing: 0.96px;
     transition: 0.3s;
 }
+
 .hover_button_white_black:hover {
     background-color: var(--primary-night);
     color: var(--secondary-white-smoke);
