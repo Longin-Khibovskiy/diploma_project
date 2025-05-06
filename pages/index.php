@@ -172,4 +172,37 @@
             </div>
         </div>
     </div>
+    <div class="width_container_beige">
+        <div class="fashion_and_pop">
+            <?php extract(FindById($link, 5)); ?>
+            <h3><?= $title ?></h3>
+            <div class="fashion_and_pop_container">
+                <div class="fashion_and_pop_left_container">
+                    <div class="fashion_and_pop_left_text_container">
+                        <?php foreach (array_slice($descriptionParts, 0, 2) as $part) : ?>
+                            <p class="fashion_and_pop_left_text"><?= $part ?></p>
+                        <?php endforeach ?>
+                    </div>
+                    <div class="fashion_and_pop_img_container">
+                        <?php foreach (array_slice($imagesParts, 0, 2) as $part) : ?>
+                            <img src="<?= $part ?>" alt="">
+                        <?php endforeach ?>
+                    </div>
+                </div>
+                <div class="fashion_and_pop_right_container">
+                    <div class="fashion_and_pop_img_container">
+                        <?php foreach (array_slice($imagesParts, 2, 2) as $part) : ?>
+                            <img src="<?= $part ?>" alt="">
+                        <?php endforeach ?>
+                    </div>
+                    <div class="fashion_and_pop_right_text_container">
+                        <p class="fashion_and_pop_right_text"><?= $descriptionParts[2] ?></p>
+                    </div>
+                    <a href="http://localhost/pages/pop_culture_fashion.php" class="link_for_button">
+                        <button class="hover_button_black_orange">Открыть статью</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
