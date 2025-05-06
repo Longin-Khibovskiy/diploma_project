@@ -447,6 +447,52 @@ header {
     justify-content: center;
 }
 
+.lux_title_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lux_title_container p {
+    max-width: 280px;
+}
+
+
+
+.lux_history_container {
+    margin-top: 72px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+.lux_history_left_container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.lux_history_left_img_container {
+    display: flex;
+    gap: 40px;
+}
+.lux_three_container {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.lux_last_container {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+
+
+
 /* Buttons */
 .link_for_button {
     text-decoration: none;
@@ -473,4 +519,27 @@ header {
 
 .hover_button_black_orange:hover {
     background-color: var(--hover-golden);
+}
+
+.hover_button_white_black {
+    background-color: transparent;
+    border: 2px solid var(--primary-night);
+    cursor: pointer;
+    display: flex;
+    width: auto;
+    padding: 22px 112px;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-eerie-black);
+    font-family: playfair-button;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+    letter-spacing: 0.96px;
+    transition: 0.3s;
+}
+.hover_button_white_black:hover {
+    background-color: var(--primary-night);
+    color: var(--secondary-white-smoke);
 }

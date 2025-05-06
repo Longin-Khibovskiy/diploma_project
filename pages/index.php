@@ -12,12 +12,12 @@
             $otherText = htmlspecialchars(implode(" ", $words));
             ?>
             <div class="title_grid">
-                <h1 class="page_title"><?php echo $firstWord ?></h1>
+                <h1 class="page_title"><?= $firstWord ?></h1>
                 <div class="author_container">
                     <p class="author_page">«от Сальвадора Дали и Schiaparelli до H&M и Mugler»</p>
                 </div>
                 <div class="second_paragraph">
-                    <h2 class="page_title"><?php echo $otherText ?></h2>
+                    <h2 class="page_title"><?= $otherText ?></h2>
                 </div>
             </div>
         <?php
@@ -39,24 +39,24 @@
     </div>
     <div class="whats_collaboration">
         <?php extract(FindById($link, 1)); ?>
-        <h3><?php echo $title ?></h3>
+        <h3><?= $title ?></h3>
         <div class="whats_container">
             <div class="whats_left">
-                <p class="whats_first_text"><?php echo $descriptionParts[0] ?></p>
+                <p class="whats_first_text"><?= $descriptionParts[0] ?></p>
                 <?php foreach (array_slice($descriptionParts, 1, 2) as $part) : ?>
-                    <p class="whats_other_text"><?php echo $part ?></p>
+                    <p class="whats_other_text"><?= $part ?></p>
                 <?php endforeach ?>
-                <img src="<?php echo $imagesParts[0] ?>" alt="" class="whats_left_img">
+                <img src="<?= $imagesParts[0] ?>" alt="" class="whats_left_img">
             </div>
             <div class="whats_right">
-                <img src="<?php echo $imagesParts[1] ?>" alt="" class="whats_first_right_img">
-                <p class="whats_right_text"><?php echo $descriptionParts[3] ?></p>
+                <img src="<?= $imagesParts[1] ?>" alt="" class="whats_first_right_img">
+                <p class="whats_right_text"><?= $descriptionParts[3] ?></p>
                 <div class="whats_imgs_container">
                     <?php foreach (array_slice($imagesParts, 2, 2) as $part) : ?>
-                        <img src="<?php echo $part ?>" alt="" class="whats_right_img">
+                        <img src="<?= $part ?>" alt="" class="whats_right_img">
                     <?php endforeach ?>
                     <div class="whats_amazing_img">
-                        <img src="<?php echo $imagesParts[4] ?>" alt="">
+                        <img src="<?= $imagesParts[4] ?>" alt="">
                     </div>
                 </div>
             </div>
@@ -65,11 +65,11 @@
     <div class="width_container_timberwolf">
         <div class="art_fashion">
             <?php extract(FindById($link, 2)); ?>
-            <h3><?php echo $title ?></h3>
+            <h3><?= $title ?></h3>
             <div class="art_fashion_container">
                 <?php for ($i = 0; $i <= 2; $i++): ?>
-                    <p><?php echo $descriptionParts[$i] ?></p>
-                    <img src="<?php echo $imagesParts[$i] ?>" alt="">
+                    <p><?= $descriptionParts[$i] ?></p>
+                    <img src="<?= $imagesParts[$i] ?>" alt="">
                 <?php endfor ?>
             </div>
             <div class="art_fashion_button_container">
@@ -82,47 +82,74 @@
     <div class="houses_and_artists">
         <?php extract(FindById($link, 3)); ?>
         <div class="houses_and_artists_title_container">
-            <h3><?php echo $title ?></h3>
-            <p><?php echo $author ?></p>
+            <h3><?= $title ?></h3>
+            <p><?= $author ?></p>
         </div>
         <div class="houses_first_container">
             <div class="houses_first_text_container">
                 <?php foreach (array_slice($descriptionParts, 0, 3) as $part) : ?>
-                    <p class="houses_first_text"><?php echo $part ?></p>
+                    <p class="houses_first_text"><?= $part ?></p>
                 <?php endforeach ?>
             </div>
-            <img src="<?php echo $imagesParts[0] ?>" alt="">
+            <img src="<?= $imagesParts[0] ?>" alt="">
         </div>
         <div class="houses_imgs_container">
             <?php foreach (array_slice($imagesParts, 1, 2) as $part) : ?>
-                <img src="<?php echo $part ?>" alt="">
+                <img src="<?= $part ?>" alt="">
             <?php endforeach ?>
         </div>
         <div class="house_second_container">
-            <img src="<?php echo $imagesParts[3] ?>" alt="" class="house_second_img">
+            <img src="<?= $imagesParts[3] ?>" alt="" class="house_second_img">
             <div class="house_second_text_container">
                 <?php foreach (array_slice($descriptionParts, 3, 3) as $part) : ?>
-                    <p class="houses_second_text"><?php echo $part ?></p>
+                    <p class="houses_second_text"><?= $part ?></p>
                 <?php endforeach ?>
             </div>
         </div>
         <div class="house_third_container">
             <div class="house_third_text_container">
                 <?php foreach (array_slice($descriptionParts, 6, 2) as $part) : ?>
-                    <p class="houses_third_text"><?php echo $part ?></p>
+                    <p class="houses_third_text"><?= $part ?></p>
                 <?php endforeach ?>
             </div>
             <?php foreach (array_slice($imagesParts, 4, 2) as $part) : ?>
-                <img src="<?php echo $part ?>" alt="">
+                <img src="<?= $part ?>" alt="">
             <?php endforeach ?>
         </div>
         <div class="house_last_container">
-            <img src="<?php echo $imagesParts[6] ?>" alt="">
+            <img src="<?= $imagesParts[6] ?>" alt="">
         </div>
     </div>
     <div class="width_container_isabelline">
         <div class="lux">
-            <?php extract(FindById($link, 1)); ?>
+            <?php extract(FindById($link, 4)); ?>
+            <div class="lux_title_container">
+                <h3><?= $title ?></h3>
+                <p><?= $author ?></p>
+            </div>
+            <div class="lux_history_container">
+                <div class="lux_history_left_container">
+                    <p><?= $descriptionParts[0] ?></p>
+                    <div class="lux_history_left_img_container">
+                        <?php foreach (array_slice($imagesParts, 0, 2) as $part) : ?>
+                            <img src="<?= $part ?>" alt="">
+                        <?php endforeach ?>
+                    </div>
+                </div>
+                <img src="<?= $imagesParts[2] ?>" alt="">
+            </div>
+            <div class="lux_three_container">
+                <p><?= $descriptionParts[1] ?></p>
+                <?php foreach (array_slice($imagesParts, 3, 2) as $part) : ?>
+                    <img src="<?= $part ?>" alt="">
+                <?php endforeach ?>
+            </div>
+            <div class="lux_last_container">
+                <a href="http://localhost/pages/luxury_mass_market.php" class="link_for_button">
+                    <button class="hover_button_white_black">Открыть статью</button>
+                </a>
+                <img src="<?= $imagesParts[5] ?>" alt="">
+            </div>
         </div>
     </div>
 </section>
