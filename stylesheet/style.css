@@ -65,15 +65,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: clamp(5rem, calc(2.08rem + 3.33vw), 8.75rem);
+    /*font-size: clamp(5rem, calc(2.08rem + 3.33vw), 8.75rem);*/
+    font-size: 80px;
 }
 
 h2 {
-    font-size: clamp(4.75rem, calc(2.03rem + 3.11vw), 8.25rem);
+    /*font-size: clamp(4.75rem, calc(2.03rem + 3.11vw), 8.25rem);*/
+    font-size: 76px;
 }
 
 h3 {
-    font-size: clamp(4rem, calc(1.86rem + 2.44vw), 6.75rem);
+    /*font-size: clamp(4rem, calc(1.86rem + 2.44vw), 6.75rem);*/
+    font-size: 64px;
 }
 
 p {
@@ -86,15 +89,25 @@ p {
     letter-spacing: 0.8px;
 }
 
+
+.important_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 /* Header */
 header {
     width: 100%;
     background-color: var(--header-footer-night);
     padding: 30px 100px;
+    display: flex;
+    justify-content: center;
 }
 
 .header_container {
     width: 100%;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
 }
@@ -132,10 +145,15 @@ header {
 .home {
     background-color: var(--primary-white-smoke);
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title_grid {
     width: 100%;
+    max-width: 1600px;
     padding: 30px 100px 0 100px;
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -168,6 +186,7 @@ header {
 }
 
 .home_video {
+    max-width: 1600px;
     margin: 58px 0;
     padding: 0 100px;
     display: flex;
@@ -176,8 +195,7 @@ header {
 }
 
 .home_video img {
-    width: clamp(75rem, calc(-12.5rem + 100vw), 187.5rem);
-    height: clamp(36.31rem, calc(-6.03rem + 48.39vw), 90.75rem);
+    width: clamp(20rem, calc(-3rem + 92vw), 77.5rem);
 }
 
 .first_description_home_page, .second_description_home_page {
@@ -191,13 +209,23 @@ header {
     letter-spacing: 0.8px;
 }
 
+.first_description_home_page_container {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
 .first_description_home_page {
     width: clamp(59.28rem, calc(0rem + 67.75vw), 135.5rem);
+    max-width: 1000px;
 }
 
 .description_home_page_container {
     margin-top: 20px;
     width: 100%;
+    max-width: 1440px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -205,10 +233,12 @@ header {
 
 .second_description_home_page {
     width: clamp(42.34rem, calc(0rem + 48.39vw), 96.77rem);
+    max-width: 1000px;
 }
 
 .whats_collaboration {
     width: 100%;
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
     padding: 140px 100px;
@@ -290,14 +320,22 @@ header {
     height: 200px;
 }
 
-.art_fashion {
+.width_container {
+    width: 100%;
     background-color: var(--secondary-timberwolf);
+    display: flex;
+    justify-content: center;
+}
+
+.art_fashion {
     padding: 44px 100px;
     width: 100%;
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .art_fashion_container {
     width: 100%;
     margin: 72px 0 60px 0;
@@ -305,19 +343,109 @@ header {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
 }
-.art_fashion_container p:nth-child(5){
+
+.art_fashion_container p:nth-child(5) {
     margin-top: 40px;
 }
+
 .art_fashion_button_container {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
+.houses_and_artists {
+    width: 100%;
+    max-width: 1600px;
+    padding: 140px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.houses_and_artists_title_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.houses_first_container {
+    margin-top: 72px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: start;
+}
+
+.houses_first_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.houses_imgs_container {
+    margin-top: clamp(-3.25rem, calc(-8.31rem + 5.78vw), 3.25rem);
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.houses_imgs_container img:nth-child(1) {
+    width: 386px;
+    height: 288px;
+}
+
+.house_second_container {
+    margin: 120px 0;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.house_second_img {
+    height: 348px;
+}
+
+.house_second_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.house_third_container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    /*justify-content: space-between;*/
+}
+
+.house_third_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.house_last_container {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.house_last_container img {
+    height: 380px;
+}
+
+
 /* Buttons */
 .link_for_button {
     text-decoration: none;
 }
+
 .hover_button_black_orange {
     background-color: var(--primary-night);
     border: none;
@@ -336,6 +464,7 @@ header {
     letter-spacing: 0.96px;
     transition: 0.3s;
 }
+
 .hover_button_black_orange:hover {
     background-color: var(--hover-golden);
 }
