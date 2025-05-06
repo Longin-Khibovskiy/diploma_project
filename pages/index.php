@@ -68,4 +68,31 @@
             </div>
         <?php endif ?>
     </div>
+    <div class="art_fashion">
+        <?php
+        $sql = "SELECT * FROM HomeArticles WHERE id = 2";
+        $result = $link->query($sql);
+            if ($result && $result->num_rows > 0) :
+            $row = $result->fetch_assoc();
+            $title = $row['title'];
+            $description = $row['description'];
+            $images = $row['images'];
+            $descriptionParts = array_filter(explode('/', $description));
+            $descriptionParts = array_map('trim', $descriptionParts);
+            $imagesParts = array_map('trim', array_filter(explode(',', $images)));
+            ?>
+            <h3><?php echo $title ?></h3>
+            <div class="art_fashion_container">
+                <?php for ($i = 0; $i <= 2; $i++): ?>
+                    <p><?php echo $descriptionParts[$i] ?></p>
+                    <img src="<?php echo $imagesParts[$i] ?>" alt="">
+                <?php endfor ?>
+            </div>
+            <div class="art_fashion_button_container">
+                <a href="http://localhost/pages/art_fashion.php" class="link_for_button">
+                    <button class="hover_button_black_orange">Подробнее</button>
+                </a>
+            </div>
+        <?php endif ?>
+    </div>
 </section>

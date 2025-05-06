@@ -76,6 +76,16 @@ h3 {
     font-size: clamp(4rem, calc(1.86rem + 2.44vw), 6.75rem);
 }
 
+p {
+    color: var(--primary-eerie-black);
+    font-family: playfair-light;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 144%; /* 28.8px */
+    letter-spacing: 0.8px;
+}
+
 /* Header */
 header {
     width: 100%;
@@ -122,11 +132,11 @@ header {
 .home {
     background-color: var(--primary-white-smoke);
     width: 100%;
-    padding: 30px 100px;
 }
 
 .title_grid {
     width: 100%;
+    padding: 30px 100px 0 100px;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     align-items: center;
@@ -159,6 +169,7 @@ header {
 
 .home_video {
     margin: 58px 0;
+    padding: 0 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,6 +181,7 @@ header {
 }
 
 .first_description_home_page, .second_description_home_page {
+    padding: 0 100px;
     color: var(--primary-eerie-black);
     font-family: playfair-light;
     font-size: 20px;
@@ -199,7 +211,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 140px 0;
+    padding: 140px 100px;
 }
 
 .whats_container {
@@ -276,4 +288,54 @@ header {
 .whats_amazing_img img {
     width: 174px;
     height: 200px;
+}
+
+.art_fashion {
+    background-color: var(--secondary-timberwolf);
+    padding: 44px 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.art_fashion_container {
+    width: 100%;
+    margin: 72px 0 60px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+}
+.art_fashion_container p:nth-child(5){
+    margin-top: 40px;
+}
+.art_fashion_button_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Buttons */
+.link_for_button {
+    text-decoration: none;
+}
+.hover_button_black_orange {
+    background-color: var(--primary-night);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    width: auto;
+    padding: 22px 112px;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-white-smoke);
+    font-family: playfair-button;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+    letter-spacing: 0.96px;
+    transition: 0.3s;
+}
+.hover_button_black_orange:hover {
+    background-color: var(--hover-golden);
 }

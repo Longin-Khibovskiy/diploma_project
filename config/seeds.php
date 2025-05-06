@@ -115,12 +115,19 @@ for ($i = 0; $i <= 10; $i++) {
     $img_fashion_and_pop_culture[] = "../images/fashion_and_pop_culture/imagesfashion_and_pop_culture-$i.png";
 }
 $img_fashion_and_pop_cultureString = implode(', ', $img_fashion_and_pop_culture);
+// Главная страница
 ## Коллаборация что?
 $img_collaboration_what = [];
 for ($i = 4; $i >= 0; $i--) {
     $img_collaboration_what[] = "../images/home_articles_images/collaboration_what/imagescollaboration_what-$i.png";
 }
 $img_collaboration_whatString = implode(', ', $img_collaboration_what);
+
+$art_and_fashion = [];
+for ($i = 0; $i <= 3; $i++) {
+    $art_and_fashion[] = "../images/home_articles_images/art_and_fashion/imagesart_and_fashion-$i.png";
+}
+$art_and_fashionString = implode(', ', $art_and_fashion);
 ## Данные
 $articlesDataFashionCollaboration = [
     [
@@ -146,12 +153,18 @@ $articlesDataFashionCollaboration = [
     ]
 ];
 
-$CollaborationWhatData = [
+$HomePageData = [
     [
         'Коллаборации… что?',
         '',
         'Так кто же начал этот марафон коллабов и задал тренд на многие десятилетия вперёд?/В 30-е годы Сальвадор Дали и Эльза Скьяпарелли совершили первую в истории моды коллаборацию между художником и кутюрье. По легенде знакомства их произошло так…/Сальвадор Дали сказал «Вы одеваетесь в стиле моих картин», на что она ответила «Нет, это вы пишете картины в стиле моих платьев». Ну а потом все и случилось./В результате их сотрудничества появились знаковые и скандальные вещи, включая «Пудреницу в виде циферблата» в 1935 году. В 1936 году был создан платье «слезы», а в 1937 году — культовая шляпа-туфелька и знаменитое платье с изображением лобстера, которое носила герцогиня Уоллес Симпсон.',
         $img_collaboration_whatString
+    ],
+    [
+        'Когда искусство встречает моду',
+        '',
+        'Ив Сен-Лоран переживал творческий кризис, пока вдохновение не пришло от Андре Куреша и книги о Пите Мондриане. Это привело к созданию культовых платьев в стиле колор-блокинга, которые пришлось собирать вручную. Показ стал настоящим фурором для всех./В 1997 году Рэй Кавакуба представила концептуальную «горбатую коллекцию», исследующую связь одежды и тела. Эти образы привлекли внимание хореографа Мерса Каннингема, и Кавакуба создала костюмы для перформанса «Сценарио». Тренд взаимодействия моды с искусством только начинался./Джани Версачи подружился с Энди Уорхолом, и в 1991 году посвятил ему коллекцию, ставшую знаковой. Линда Евангелиста примерила платье с изображением Мэрилин Монро, а работы Уорхола вдохновили и другие модные дома.',
+        $art_and_fashionString
     ]
 ];
 
@@ -170,7 +183,7 @@ foreach ($articlesDataFashionCollaboration as $data) {
     }
 }
 
-foreach ($CollaborationWhatData as $data) {
+foreach ($HomePageData as $data) {
     $title = $conn->real_escape_string($data[0]);
     $author = $conn->real_escape_string($data[1]);
     $description = $conn->real_escape_string($data[2]);
