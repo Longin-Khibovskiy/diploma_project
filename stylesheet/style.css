@@ -88,14 +88,20 @@ p {
     line-height: 144%; /* 28.8px */
     letter-spacing: 0.8px;
 }
-
-
-.important_container {
+/* Width containers */
+.width_container_timberwolf {
+    width: 100%;
+    background-color: var(--secondary-timberwolf);
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
+.width_container_isabelline {
+    width: 100%;
+    background-color: var(--tertiary-isabelline);
+    display: flex;
+    justify-content: center;
+}
 /* Header */
 header {
     width: 100%;
@@ -320,13 +326,6 @@ header {
     height: 200px;
 }
 
-.width_container {
-    width: 100%;
-    background-color: var(--secondary-timberwolf);
-    display: flex;
-    justify-content: center;
-}
-
 .art_fashion {
     padding: 44px 100px;
     width: 100%;
@@ -439,7 +438,14 @@ header {
 .house_last_container img {
     height: 380px;
 }
-
+.lux {
+    width: 100%;
+    max-width: 1600px;
+    padding: 44px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* Buttons */
 .link_for_button {

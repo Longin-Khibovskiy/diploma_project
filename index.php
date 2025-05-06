@@ -1,4 +1,5 @@
 <?php require_once './config/connect.php'?>
+<?php require_once './config/settings.php'?>
 <?php include './tpl/header.php'?>
 <?php
 if (!isset($_GET['page'])) {
