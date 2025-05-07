@@ -160,11 +160,27 @@
                 <?php endforeach ?>
             </div>
             <!-- Тут будет слайдер -->
-            <img src="<?= $imagesParts[6] ?>" alt="" class="sec_lux_first_img">
+            <div class="swiper swiper_right">
+                <div class="swiper-wrapper">
+                    <?php foreach (array_slice($imagesParts, 6, 5) as $part) : ?>
+                    <div class="swiper-slide post">
+                        <img src="<?= $part ?>" alt="" class="post-img">
+                    </div>
+                    <?php endforeach ?>
+                </div>
+            </div>
         </div>
         <div class="sec_lux_second_container">
             <!-- Тут будет слайдер -->
-            <img src="<?= $imagesParts[14] ?>" alt="" class="sec_lux_second_img">
+            <div class="swiper swiper_left">
+                <div class="swiper-wrapper">
+                    <?php foreach (array_slice($imagesParts, 11, 4) as $part) : ?>
+                        <div class="swiper-slide post">
+                            <img src="<?= $part ?>" alt="" class="post-img">
+                        </div>
+                    <?php endforeach ?>
+                </div>
+            </div>
             <div class="sec_lux_second_text_container">
                 <?php foreach (array_slice($descriptionParts, 5, 2) as $part) : ?>
                     <p class="sec_lux_second_text"><?= $part ?></p>

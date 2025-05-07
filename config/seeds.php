@@ -29,7 +29,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->select_db($dbname);
 
 ## Создание таблицы Pages
-$sql = "CREATE TABLE IF NOT EXISTS pages (
+$sql = "CREATE TABLE IF NOT EXISTS Pages (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,
@@ -43,7 +43,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 ## Создание таблицы Articles
-$sql = "CREATE TABLE IF NOT EXISTS articles (
+$sql = "CREATE TABLE IF NOT EXISTS Articles (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     author VARCHAR(255),
@@ -88,7 +88,7 @@ foreach ($pagesData as $data) {
     $description = $data[1] ? "'" . $conn->real_escape_string($data[1]) . "'" : "NULL";
     $pages_link = $data[2] ? "'" . $conn->real_escape_string($data[2]) . "'" : "NULL";
 
-    $sql = "INSERT INTO pages (name, description, link) 
+    $sql = "INSERT INTO Pages (name, description, link) 
             VALUES ('$name', $description, $pages_link)";
 
     if (!$conn->query($sql)) {
@@ -212,7 +212,7 @@ foreach ($articlesDataFashionCollaboration as $data) {
     $images = $conn->real_escape_string($data[3]);
     $pages_id = $data[4] ?? 'NULL';
 
-    $sql = "INSERT INTO articles (name, author, description, images, pages_id)
+    $sql = "INSERT INTO Articles (name, author, description, images, pages_id)
             VALUES ('$name', '$author', '$description', '$images', $pages_id)";
 
     if (!$conn->query($sql)) {
