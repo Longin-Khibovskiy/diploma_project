@@ -560,6 +560,14 @@ header {
     user-select: none;
     pointer-events: none;
 }
+.swiper-scrollbar {
+    --swiper-scrollbar-bottom: 0;
+    --swiper-scrollbar-drag-bg-color: var(--hover-golden);
+    --swiper-scrollbar-size: 4px;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+}
 /* End Swiper */
 
 
