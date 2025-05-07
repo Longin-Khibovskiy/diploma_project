@@ -1,6 +1,8 @@
 <?php
 function PagesLinks($link)
 {
+    $currentPage = $_GET['page'] ?? 'index';
+
     $sql = 'SELECT name, link FROM Pages';
     $result = mysqli_query($link, $sql);
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -8,10 +10,16 @@ function PagesLinks($link)
 
     $html = '';
     foreach ($rows as $row) {
+        if ($currentPage === 'index') {
+            $isActive = ($row['link'] === '/') ? 'active' : '';
+        } else {
+            $isActive = ($row['link'] === '/' . $currentPage) ? 'active' : '';
+        }
+
         $html .= sprintf(
             '<a href="%s" class="%s">%s</a>',
             htmlspecialchars($row['link'] ?? '#'),
-            htmlspecialchars('nav_link'),
+            htmlspecialchars("nav_link $isActive"),
             htmlspecialchars($row['name'] ?? '')
         );
     }
