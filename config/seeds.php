@@ -75,12 +75,12 @@ if ($conn->query($sql) === TRUE) {
 
 ## Вставляем данные в таблицу pages
 $pagesData = [
-    ['Главная', 'Коллаборации изменившие мир моды', 'http://localhost/'],
-    ['Искусство & мода', 'Мода и коллаборации: когда искусство встречает моду', 'http://localhost/pages/art_fashion.php'],
-    ['Люкс vs. масс-маркет', 'Люкс и масс-маркет', 'http://localhost/pages/luxury_mass_market.php'],
-    ['Поп-культура & мода', 'Мода и поп-культура', 'http://localhost/pages/pop_culture_fashion.php'],
-    ['Ссылки', NULL, 'http://localhost/pages/links.php'],
-    ['Войти', 'Войдите в систему или создайте учётную запись', 'http://localhost/pages/authorisation.php']
+    ['Главная', 'Коллаборации изменившие мир моды', '/'],
+    ['Искусство & мода', 'Мода и коллаборации: когда искусство встречает моду', '/art_fashion'],
+    ['Люкс vs. масс-маркет', 'Люкс и масс-маркет', '/luxury_mass_market'],
+    ['Поп-культура & мода', 'Мода и поп-культура', '/pop_culture_fashion'],
+    ['Ссылки', NULL, '/links'],
+    ['Войти', 'Войдите в систему или создайте учётную запись', '/authorisation']
 ];
 
 foreach ($pagesData as $data) {

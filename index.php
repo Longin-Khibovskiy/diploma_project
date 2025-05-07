@@ -1,12 +1,12 @@
-<?php require_once './config/connect.php'?>
-<?php require_once './config/settings.php'?>
-<?php include './tpl/header.php'?>
 <?php
-if (!isset($_GET['page'])) {
-    include 'pages/index.php';
-} else if (file_exists('pages/'.$_GET['page'].'.php')) {
-    include 'pages/'.$_GET['page'].'.php';
-} else {
-    include 'pages/404.php';
-} ?>
-<?php include 'tpl/footer.php' ?>
+require_once './config/connect.php';
+require_once './config/settings.php';
+include './tpl/header.php';
+
+$page = $_GET['page'] ?? 'index';
+$pagePath = 'pages/' . $page . '.php';
+
+if (file_exists($pagePath)) include $pagePath; else include 'pages/404.php';
+
+include './tpl/footer.php';
+?>
