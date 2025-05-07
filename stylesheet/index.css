@@ -137,12 +137,32 @@ header {
 .nav_link {
     font-family: playfair-light;
     color: var(--secondary-white-smoke);
+    width: fit-content;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
     line-height: 144%;
     letter-spacing: 0.8px;
     text-decoration: none;
+    transition: 0.3s;
+
+}
+
+.nav_link.active {
+    color: var(--hover-gold);
+    border-bottom: 2px solid var(--hover-gold);
+
+}
+
+.nav_link.active.no-highlight {
+    color: var(--secondary-white-smoke);
+    border-bottom: 2px solid var(--hover-gold);
+
+}
+
+.nav_link:hover {
+    color: var(--hover-gold);
+
 }
 
 .header_button {
@@ -561,6 +581,7 @@ header {
     user-select: none;
     pointer-events: none;
 }
+
 .swiper-scrollbar {
     --swiper-scrollbar-bottom: 0;
     --swiper-scrollbar-drag-bg-color: var(--hover-golden);
@@ -569,6 +590,7 @@ header {
     left: 0 !important;
     right: 0 !important;
 }
+
 /* End Swiper */
 
 
