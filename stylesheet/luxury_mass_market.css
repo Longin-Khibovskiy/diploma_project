@@ -1,0 +1,60 @@
+.lux_market {
+    background-color: var(--primary-white-smoke);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lux_market_container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 140px 100px;
+}
+
+.lux_market_header_container,
+.lux_market_seventh_container,
+.lux_market_tenth_container,
+.lux_market_thirteenth_container,
+.lux_market_fifteenth_container,
+.lux_market_last_container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+
+.lux_market_header_container {
+    margin-top: 72px;
+}
+
+.lux_market_header_left_container,
+.lux_market_seventh_left_container,
+.lux_market_tenth_right_container,
+.lux_market_thirteenth_left_container,
+.lux_market_last_right_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.lux_market_seventh_container,
+.lux_market_thirteenth_container {
+    margin: 140px 0;
+}
+
+.lux_market_tenth_img_container,
+.lux_market_last_img_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.lux_market_last_container {
+    margin-top: 140px;
+}

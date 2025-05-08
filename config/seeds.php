@@ -77,7 +77,7 @@ if ($conn->query($sql) === TRUE) {
 $pagesData = [
     ['Главная', 'Коллаборации изменившие мир моды', '/'],
     ['Искусство & мода', 'Мода и коллаборации: когда искусство встречает моду', '/art_fashion'],
-    ['Люкс vs. масс-маркет', 'Люкс и масс-маркет', '/luxury_mass_market'],
+    ['Люкс и масс-маркет', 'Люкс и масс-маркет', '/luxury_mass_market'],
     ['Поп-культура & мода', 'Мода и поп-культура', '/pop_culture_fashion'],
     ['Ссылки', NULL, '/links'],
     ['Войти', 'Войдите в систему или создайте учётную запись', '/authorisation']
@@ -105,8 +105,8 @@ for ($i = 1; $i <= 12; $i++) {
 $img_fashion_and_collaborationString = implode(', ', $img_fashion_and_collaboration);
 // Люкс и масс-маркер
 $img_luxury_and_mass_market = [];
-for ($i = 0; $i <= 10; $i++) {
-    $img_luxury_and_mass_market[] = "../images/fashion_and_pop_culture/imagesluxury_and_mass_market-$i.png";
+for ($i = 10; $i >= 0; $i--) {
+    $img_luxury_and_mass_market[] = "../images/luxury_and_mass_market/imagesluxury_and_mass_market-$i.png";
 }
 $img_luxury_and_mass_marketString = implode(', ', $img_luxury_and_mass_market);
 // Мода и поп культура
