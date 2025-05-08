@@ -54,3 +54,14 @@ var swiperLeft = new Swiper(".swiper_left", {
         },
     },
 });
+
+document.querySelectorAll('.nav_link').forEach(link => {
+    link.addEventListener('mouseover', () => {
+        if (!link.classList.contains('active')) {
+            document.querySelector('.nav_link.active').classList.add('no-highlight');
+        }
+    });
+    link.addEventListener('mouseout', () => {
+        document.querySelector('.nav_link.active').classList.remove('no-highlight');
+    });
+});
