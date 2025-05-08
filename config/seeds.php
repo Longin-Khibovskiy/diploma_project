@@ -111,8 +111,8 @@ for ($i = 10; $i >= 0; $i--) {
 $img_luxury_and_mass_marketString = implode(', ', $img_luxury_and_mass_market);
 // Мода и поп культура
 $img_fashion_and_pop_culture = [];
-for ($i = 0; $i <= 10; $i++) {
-    $img_fashion_and_pop_culture[] = "../images/fashion_and_pop_culture/imagesfashion_and_pop_culture-$i.png";
+for ($i = 0; $i <= 11; $i++) {
+    $img_fashion_and_pop_culture[] = "../images/fashion_and_pop_culture/fashion_and_pop_culture-$i.png";
 }
 $img_fashion_and_pop_cultureString = implode(', ', $img_fashion_and_pop_culture);
 // Главная страница

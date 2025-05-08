@@ -1,0 +1,66 @@
+.pop_culture {
+    background-color: var(--primary-white-smoke);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop_culture_container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 140px 100px;
+}
+
+.pop_culture_header_container,
+.pop_culture_thirteenth_container,
+.pop_culture_simpson_container,
+.pop_culture_balmain_container,
+.pop_culture_balmain_right_container,
+.pop_culture_last_container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.pop_culture_header_container {
+    margin-top: 72px;
+}
+
+.pop_culture_header_left_container,
+.pop_culture_thirteenth_left_container,
+.pop_culture_simpson_right_container,
+.pop_culture_balmain_left_container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.pop_culture_header_left_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.pop_culture_thirteenth_container,
+.pop_culture_balmain_container {
+    margin: 140px 0;
+}
+
+.pop_culture_thirteenth_left_img_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.pop_culture_simpson_right_img_container {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.pop_culture_balmain_left_container {
+    align-items: flex-start;
+}
