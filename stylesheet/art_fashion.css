@@ -1,0 +1,37 @@
+.art_and_fashion {
+    background-color: var(--primary-white-smoke);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.art_and_fashion_container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 140px 100px;
+}
+
+.art_and_fashion_header_container {
+    width: 92%;
+}
+
+.art_and_fashion_header_text {
+    margin: 72px 0 60px 0;
+    max-width: 70%;
+}
+
+.art_and_fashion_header_img_container {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.art_and_fashion_first_work_container {
+    margin: 140px 0 180px 0;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}

@@ -1,6 +1,7 @@
 var swiperRight = new Swiper(".swiper_right", {
     grabCursor: true,
     speed: 800,
+    loop: true,
     mousewheel: {
         invert: false,
     },
@@ -30,6 +31,9 @@ var swiperLeft = new Swiper(".swiper_left", {
     direction: 'horizontal',
     initialSlide: document.querySelectorAll('.swiper_left .swiper-slide').length - 1, // Старт с последнего слайда
     loop: true,
+    mousewheel: {
+        invert: true,
+    },
     scrollbar: {
         el: ".swiper-scrollbar",
         draggable: true,
