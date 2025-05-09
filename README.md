@@ -6,6 +6,7 @@ echo "DB_HOST=localhost" >> .env
 echo "DB_USER=root" >> .env
 echo "DB_PASS=root" >> .env
 echo "DB_NAME=Collection" >> .env
+php config/seeds.php
 ```
 
 ### Команда для заполнения базы данных ###

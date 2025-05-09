@@ -1,4 +1,29 @@
 <?php
+function NewTable($conn, $sql, $name_of_table)
+{
+    if ($conn->query($sql) === TRUE) {
+        echo "Таблица $name_of_table создана успешно.\n";
+    } else {
+        die("Ошибка создания таблицы $name_of_table: " . $conn->error);
+    }
+}
+
+function generateImages(array $config): array
+{
+    $result = [];
+    foreach ($config as $key => $params) {
+        $images = [];
+        $range = ($params['step'] > 0)
+            ? range($params['start'], $params['end'], $params['step'])
+            : range($params['start'], $params['end']);
+        foreach ($range as $i) {
+            $images[] = sprintf('../images/%s/%s-%d.png', $params['path'], $params['prefix'], $i);
+        }
+        $result[$key] = implode(', ', $images);
+    }
+    return $result;
+}
+
 function PagesLinks($link)
 {
     $currentPage = $_GET['page'] ?? 'index';
@@ -44,7 +69,8 @@ function FindById($link, $id)
     ];
 }
 
-function FindArticles($link, $id) {
+function FindArticles($link, $id)
+{
     $id = (int)$id;
     $sql = "SELECT * FROM Articles WHERE id = $id";
     $result = $link->query($sql);
