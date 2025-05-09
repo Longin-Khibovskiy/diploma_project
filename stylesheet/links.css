@@ -1,0 +1,14 @@
+.links {
+    background-color: var(--primary-white-smoke);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.links_container {
+    width: 100%;
+    max-width: 1600px;
+    padding: 140px 100px;
+}
