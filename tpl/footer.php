@@ -2,7 +2,7 @@
     <div class="footer_container">
         <div class="footer_grid">
             <div class="footer_info_container">
-                <p class="footer_text">Мода — это искусство, тренды и эксперименты. Коллаборации стали её неотъемлемой частью, соединяя творчество и коммерцию, а их влияние на индустрию только растёт.</p>
+                <p class="footer_text small">Мода — это искусство, тренды и эксперименты. Коллаборации стали её неотъемлемой частью, соединяя творчество и коммерцию, а их влияние на индустрию только растёт.</p>
                 <div class="footer_icons"><?= ShowSvgIcons() ?></div>
             </div>
             <div class="footer_pages">

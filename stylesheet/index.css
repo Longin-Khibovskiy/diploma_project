@@ -80,14 +80,27 @@ h3 {
     font-size: 64px;
 }
 
+h4 {
+    font-size: 48px;
+}
+
 p {
     color: var(--primary-eerie-black);
     font-family: playfair-light;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
-    line-height: 144%; /* 28.8px */
+    line-height: 144%;
     letter-spacing: 0.8px;
+}
+
+.small {
+    font-family: playfair-small;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 144%;
+    letter-spacing: 0.64px;
 }
 
 /* Width containers */
@@ -689,12 +702,6 @@ footer {
 
 .footer_text {
     color: var(--secondary-white-smoke);
-    font-family: playfair-small;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 144%; /* 23.04px */
-    letter-spacing: 0.64px;
 }
 
 .footer_icons {
@@ -796,4 +803,33 @@ footer {
     background-color: var(--primary-white-smoke);
     z-index: 10;
     border: 4px solid var(--primary-night);
+}
+
+/* 404 Error */
+.error_404_container {
+    padding: 100px 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_404 {
+    text-align: center;
+    color: var(--primary-eerie-black);
+    font-family: kudry;
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 12px;
+}
+
+.error_404_text {
+    font-family: playfair-light;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+    letter-spacing: 0.96px;
 }
