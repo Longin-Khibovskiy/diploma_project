@@ -73,7 +73,8 @@ $pagesData = [
     ['Люкс и масс-маркет', 'Люкс и масс-маркет', '/luxury_mass_market'],
     ['Поп-культура & мода', 'Мода и поп-культура', '/pop_culture_fashion'],
     ['Ссылки', NULL, '/links'],
-    ['Войти', 'Войдите в систему или создайте учётную запись', '/authorisation']
+    ['Войти', 'Войдите в систему или создайте учётную запись', '/authorisation'],
+    ['Регистрация', 'Войдите в систему или создайте учётную запись', '/registration']
 ];
 
 foreach ($pagesData as $data) {
@@ -100,7 +101,8 @@ $imageConfig = [
     'houses_and_artists' => ['start' => 0, 'end' => 6, 'step' => 1, 'path' => 'home_articles_images/houses_and_artists', 'prefix' => 'houses_and_artists'],
     'lux_and_market' => ['start' => 0, 'end' => 14, 'step' => 1, 'path' => 'home_articles_images/lux_and_market', 'prefix' => 'lux_and_market'],
     'fashion_and_pop' => ['start' => 0, 'end' => 3, 'step' => 1, 'path' => 'home_articles_images/fashion_and_pop', 'prefix' => 'fashion_and_pop'],
-    'authorisation' => ['start' => 0, 'end' => 0, 'step' => 1, 'path' => 'authorisation', 'prefix' => 'auth']
+    'authorisation' => ['start' => 0, 'end' => 0, 'step' => 1, 'path' => 'authorisation', 'prefix' => 'auth'],
+    'registration' => ['start' => 0, 'end' => 0, 'step' => 1, 'path' => 'registration', 'prefix' => 'reg'],
 ];
 $imageStrings = generateImages($imageConfig);
 ## Данные
@@ -132,6 +134,13 @@ $articlesDataFashionCollaboration = [
         '*Продолжая пользоваться нашей платформой, в том числе через наших партнёров, вы соглашаетесь с нашим пользовательским соглашением и подтверждаете нашу политику конфиденциальности.',
         $imageStrings['authorisation'],
         6
+    ],
+    [
+        'Войдите в систему или создайте учётную запись',
+        '',
+        '*Нажимая на кнопку зарегестрироваться, вы соглашаетесь с нашим пользовательским соглашением и подтверждаете нашу политику конфиденциальности.',
+        $imageStrings['registration'],
+        7
     ]
 ];
 

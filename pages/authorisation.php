@@ -20,7 +20,7 @@
                 </div>
                 <div class="authorisation_fields_btn">
                     <button class="hover_button_black_orange">Войти</button>
-                    <button class="hover_button_white_black">Зарегистрироваться</button>
+                    <button class="hover_button_white_black" onclick="location.href='/registration';">Зарегистрироваться</button>
                 </div>
             </div>
             <div class="authorisation_separation_container">
