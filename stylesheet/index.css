@@ -38,7 +38,7 @@
     /* Text */
     --primary-eerie-black: #2C2C2C;
     --secondary-white-smoke: #F3F3F3;
-    --tertiary-battleship-gray: #4B4B4B 64%;
+    --tertiary-battleship-gray: rgba(75, 75, 75, 0.64);
     --hover-silver-text: #AAAAAA;
     --hover-gold: #E0BD43;
 
@@ -80,14 +80,36 @@ h3 {
     font-size: 64px;
 }
 
+h4 {
+    font-size: 48px;
+}
+
 p {
     color: var(--primary-eerie-black);
     font-family: playfair-light;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
-    line-height: 144%; /* 28.8px */
+    line-height: 144%;
     letter-spacing: 0.8px;
+}
+
+.small {
+    font-family: playfair-small;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 144%;
+    letter-spacing: 0.64px;
+}
+
+.medium {
+    font-family: playfair-light;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%; /* 34.56px */
+    letter-spacing: 0.96px;
 }
 
 /* Width containers */
@@ -689,12 +711,6 @@ footer {
 
 .footer_text {
     color: var(--secondary-white-smoke);
-    font-family: playfair-small;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 144%; /* 23.04px */
-    letter-spacing: 0.64px;
 }
 
 .footer_icons {
@@ -782,4 +798,51 @@ footer {
 .hover_button_white_black:hover {
     background-color: var(--primary-night);
     color: var(--secondary-white-smoke);
+}
+
+/* Up button */
+.up {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 16px 12px;
+    border-radius: 100px;
+    background-color: transparent;
+    z-index: 10;
+    border: 3px solid var(--tertiary-battleship-gray);
+}
+
+.up svg path {
+    fill: var(--tertiary-battleship-gray);
+}
+
+/* 404 Error */
+.error_404_container {
+    padding: 100px 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_404 {
+    text-align: center;
+    color: var(--primary-eerie-black);
+    font-family: kudry;
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 12px;
+}
+
+.error_404_text {
+    font-family: playfair-light;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%;
+    letter-spacing: 0.96px;
 }

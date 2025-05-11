@@ -69,3 +69,17 @@ document.querySelectorAll('.nav_link').forEach(link => {
         document.querySelector('.nav_link.active').classList.remove('no-highlight');
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("button-up");
+    if (window.pageYOffset > 800) btn.style.display = "block";
+    else btn.style.display = "none";
+    window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 800) btn.style.display = "block";
+        else btn.style.display = "none";
+    });
+    btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
