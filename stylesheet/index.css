@@ -38,7 +38,7 @@
     /* Text */
     --primary-eerie-black: #2C2C2C;
     --secondary-white-smoke: #F3F3F3;
-    --tertiary-battleship-gray: #4B4B4B 64%;
+    --tertiary-battleship-gray: rgba(75, 75, 75, 0.64);
     --hover-silver-text: #AAAAAA;
     --hover-gold: #E0BD43;
 
@@ -101,6 +101,15 @@ p {
     font-weight: 300;
     line-height: 144%;
     letter-spacing: 0.64px;
+}
+
+.medium {
+    font-family: playfair-light;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144%; /* 34.56px */
+    letter-spacing: 0.96px;
 }
 
 /* Width containers */

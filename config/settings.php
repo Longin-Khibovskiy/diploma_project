@@ -32,6 +32,7 @@ function PagesLinks($link)
     $result = mysqli_query($link, $sql);
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
     array_pop($rows);
+    array_pop($rows);
 
     $html = '';
     foreach ($rows as $row) {
@@ -111,4 +112,47 @@ function ShowSvgIcons($folder = 'images/icons/')
         );
     }
     return $html;
+}
+
+function GetAllArticles($link)
+{
+    $sql = "SELECT * FROM Articles";
+    $result = $link->query($sql);
+
+    $articles = [];
+    while ($row = $result->fetch_assoc()) {
+        $articles[] = [
+            'id' => (int)$row['id'],
+            'name' => htmlspecialchars($row['name'] ?? 'Без названия'),
+            'author' => htmlspecialchars($row['author'] ?? 'Автор неизвестен'),
+            'descriptionParts' => array_filter(
+                explode('/', $row['description'] ?? ''),
+                function ($part) {
+                    return trim($part) !== '';
+                }
+            ),
+            'imagesParts' => array_filter(
+                explode(',', $row['images'] ?? ''),
+                function ($img) {
+                    return trim($img) !== '';
+                }
+            ),
+            'page_id' => htmlspecialchars($row['pages_id'] ?? '')
+        ];
+    }
+    return $articles;
+}
+
+function PageById($link, $id) {
+    $sql = "SELECT * FROM Pages WHERE id = $id";
+    $result = $link->query($sql);
+    if (!$result || $result->num_rows === 0) {
+        return null;
+    }
+    $row = $result->fetch_assoc();
+    return [
+        'PageName' => htmlspecialchars($row['name'] ?? ''),
+        'PageDescription' => htmlspecialchars($row['description'] ?? ''),
+        'PageLink' => htmlspecialchars($row['link'] ?? '')
+    ];
 }
