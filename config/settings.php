@@ -156,3 +156,35 @@ function PageById($link, $id) {
         'PageLink' => htmlspecialchars($row['link'] ?? '')
     ];
 }
+
+## Регистрация
+function RegisterUser($link, $email, $username, $password) {
+    $email = $link->real_escape_string($email);
+    $username = $link->real_escape_string($username);
+    $password_hash = password_hash($password, PASSWORD_BCRYPT);
+
+    $sql = "SELECT id FROM users WHERE email = '$email' OR username = '$username' LIMIT 1";
+    $result = $link->query($sql);
+    if ($result && $result->num_rows > 0) return false;
+
+    $sql = "INSERT INTO users (email, username, password_hash) 
+            VALUES ('$email', '$username', '$password_hash')";
+
+    return $link->query($sql);
+}
+
+
+## Аутентификация пользователя
+function LoginUser($link, $email, $password) {
+    $email = $link->real_escape_string($email);
+    $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+    $result = $link->query($sql);
+
+    if ($result && $result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        if (password_verify($password, $user['password_hash'])) {
+            return $user; ## Успешный вход
+        }
+    }
+    return false; ## Ошибка аутентификации
+}
