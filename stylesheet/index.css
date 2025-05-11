@@ -807,11 +807,15 @@ footer {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    padding: 10px 14px;
+    padding: 16px 12px;
     border-radius: 100px;
-    background-color: var(--primary-white-smoke);
+    background-color: transparent;
     z-index: 10;
-    border: 4px solid var(--primary-night);
+    border: 3px solid var(--tertiary-battleship-gray);
+}
+
+.up svg path {
+    fill: var(--tertiary-battleship-gray);
 }
 
 /* 404 Error */
