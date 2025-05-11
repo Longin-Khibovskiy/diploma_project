@@ -31,8 +31,7 @@ function PagesLinks($link)
     $sql = 'SELECT name, link FROM Pages';
     $result = mysqli_query($link, $sql);
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    array_pop($rows);
-    array_pop($rows);
+    $rows = array_slice($rows, 0, 5);
 
     $html = '';
     foreach ($rows as $row) {
