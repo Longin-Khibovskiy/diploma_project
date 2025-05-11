@@ -171,7 +171,9 @@ function RegisterUser($link, $email, $username, $password)
     $sql = "INSERT INTO users (email, username, password_hash) 
             VALUES ('$email', '$username', '$password_hash')";
 
-    return $link->query($sql);
+    if ($link->query($sql)) {
+        return $link->insert_id;
+    }
 }
 
 ## Аутентификация пользователя
