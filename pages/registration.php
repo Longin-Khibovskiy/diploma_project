@@ -21,10 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
     if (strlen($password) < 8 || !preg_match('/[A-Za-z]/', $password) || !preg_match('/\d/', $password)) $errors[] = "Пароль должен содержать минимум 8 символов, латинаские буквы и цифры";
 
     if (empty($errors)) {
-        if (RegisterUser($link, $email, $username, $password)) {
+        $userId = RegisterUser($link, $email, $username, $password);
+        if ($userId) {
             $_SESSION['registration_success'] = true;
             header("Location: /");
-            $_SESSION['user'] = ['email' => $email, 'username' => $username];
+            $_SESSION['user'] = ['id' => $userId, 'email' => $email, 'username' => $username];
             exit;
         } else {
             $errors[] = "Логин или email уже существует";

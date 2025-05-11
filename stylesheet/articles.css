@@ -19,6 +19,11 @@
     align-items: center;
 }
 
+h3 {
+    grid-column: span 3;
+    margin-bottom: 48px;
+}
+
 .article_container {
     text-decoration: none;
     /*max-width: 30%;*/
@@ -30,11 +35,20 @@
     flex-direction: column;
 }
 
-.article_container svg {
+.save-icon {
     cursor: pointer;
     position: absolute;
     margin-left: 286px;
     margin-top: 28px;
+    transition: transform 0.3s;
+}
+
+.save-icon:hover {
+    transform: scale(1.1);
+}
+
+.save-icon.saved path {
+    fill: var(--hover-golden);
 }
 
 .article_img {
