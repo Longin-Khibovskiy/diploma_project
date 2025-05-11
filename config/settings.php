@@ -31,8 +31,7 @@ function PagesLinks($link)
     $sql = 'SELECT name, link FROM Pages';
     $result = mysqli_query($link, $sql);
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    array_pop($rows);
-    array_pop($rows);
+    $rows = array_slice($rows, 0, 5);
 
     $html = '';
     foreach ($rows as $row) {
@@ -143,7 +142,8 @@ function GetAllArticles($link)
     return $articles;
 }
 
-function PageById($link, $id) {
+function PageById($link, $id)
+{
     $sql = "SELECT * FROM Pages WHERE id = $id";
     $result = $link->query($sql);
     if (!$result || $result->num_rows === 0) {
@@ -155,4 +155,38 @@ function PageById($link, $id) {
         'PageDescription' => htmlspecialchars($row['description'] ?? ''),
         'PageLink' => htmlspecialchars($row['link'] ?? '')
     ];
+}
+
+## Регистрация
+function RegisterUser($link, $email, $username, $password)
+{
+    $email = $link->real_escape_string($email);
+    $username = $link->real_escape_string($username);
+    $password_hash = password_hash($password, PASSWORD_BCRYPT);
+
+    $sql = "SELECT id FROM users WHERE email = '$email' OR username = '$username' LIMIT 1";
+    $result = $link->query($sql);
+    if ($result && $result->num_rows > 0) return false;
+
+    $sql = "INSERT INTO users (email, username, password_hash) 
+            VALUES ('$email', '$username', '$password_hash')";
+
+    return $link->query($sql);
+}
+
+## Аутентификация пользователя
+function LoginUser($link, $loginOrEmail, $password)
+{
+    $loginOrEmail = $link->real_escape_string($loginOrEmail);
+
+    $sql = "SELECT id, username, password_hash FROM users WHERE email = '$loginOrEmail' OR username = '$loginOrEmail' LIMIT 1";
+    $result = $link->query($sql);
+
+    if ($result && $result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+        if (password_verify($password, $user['password_hash'])) {
+            $_SESSION['user'] = ['id' => $user['id'], 'username' => $user['username']];
+            return 'success';
+        } else return 'invalid_password';
+    } else return 'user_not_found';
 }

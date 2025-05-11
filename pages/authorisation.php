@@ -1,4 +1,33 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/tpl/_head.php' ?>
+<?php
+session_start();
+
+if (empty($_SESSION['csrf_token'])) $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+    if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) die("Ошибка безопасности!");
+
+    $loginOrEmail = trim($_POST['login_or_email'] ?? '');
+    $password = trim($_POST['password'] ?? '');
+
+    $loginResult = LoginUser($link, $loginOrEmail, $password);
+
+    if ($loginResult === 'success') {
+        header("Location: /");
+        exit;
+    } else {
+        if ($loginResult === 'user_not_found') {
+            $_SESSION['auth_error'] = "Неверный логин или почта";
+        } elseif ($loginResult === 'invalid_password') {
+            $_SESSION['auth_error'] = "Неверный пароль";
+        } else {
+            $_SESSION['auth_error'] = "Ошибка авторизации";
+        }
+        header("Location: /authorisation");
+        exit;
+    }
+}
+?>
 <?php extract(FindArticles($link, 4)); ?>
 <section class="authorisation">
     <div class="authorisation_container">
@@ -13,16 +42,26 @@
         <div class="authorisation_main_container">
             <h4><?= $name ?></h4>
             <p class="authorisation_policy"><?= $descriptionParts[0] ?></p>
-            <div class="authorisation_fields">
+            <form class="authorisation_fields" method="post">
+                <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
+                <input type="hidden" name="login" value="1">
                 <div class="authorisation_fields_inp">
-                    <input type="email" placeholder="Email" class="authorisation_input">
-                    <input type="password" minlength="8" placeholder="Пароль" class="authorisation_input">
+                    <input type="text" name="login_or_email" placeholder="Логин или почта" class="authorisation_input" value="<?= htmlspecialchars($_POST['login_or_email'] ?? '') ?>" required>
+                    <input type="password" name="password" placeholder="Пароль" class="authorisation_input" minlength="8" required>
                 </div>
+                <?php if (!empty($_SESSION['auth_error'])): ?>
+                    <div class="auth_error_message_container">
+                        <div class="auth_error_message">
+                                <p class="auth_error small"><?= htmlspecialchars($_SESSION['auth_error']); ?></p>
+                        </div>
+                    </div>
+                    <?php unset($_SESSION['auth_error']) ?>
+                <?php endif; ?>
                 <div class="authorisation_fields_btn">
-                    <button class="hover_button_black_orange">Войти</button>
+                    <button class="hover_button_black_orange" type="submit">Войти</button>
                     <button class="hover_button_white_black" onclick="location.href='/registration';">Зарегистрироваться</button>
                 </div>
-            </div>
+            </form>
             <div class="authorisation_separation_container">
                 <hr>
                 <p class="small">Авторизоваться через</p>
