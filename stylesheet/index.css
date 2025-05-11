@@ -154,7 +154,6 @@ header {
     display: flex;
     align-items: center;
     gap: 28px;
-    height: fit-content;
 }
 
 .nav_link {

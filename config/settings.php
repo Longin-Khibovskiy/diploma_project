@@ -142,7 +142,8 @@ function GetAllArticles($link)
     return $articles;
 }
 
-function PageById($link, $id) {
+function PageById($link, $id)
+{
     $sql = "SELECT * FROM Pages WHERE id = $id";
     $result = $link->query($sql);
     if (!$result || $result->num_rows === 0) {
@@ -157,7 +158,8 @@ function PageById($link, $id) {
 }
 
 ## Регистрация
-function RegisterUser($link, $email, $username, $password) {
+function RegisterUser($link, $email, $username, $password)
+{
     $email = $link->real_escape_string($email);
     $username = $link->real_escape_string($username);
     $password_hash = password_hash($password, PASSWORD_BCRYPT);
@@ -172,18 +174,19 @@ function RegisterUser($link, $email, $username, $password) {
     return $link->query($sql);
 }
 
-
 ## Аутентификация пользователя
-function LoginUser($link, $email, $password) {
-    $email = $link->real_escape_string($email);
-    $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
+function LoginUser($link, $loginOrEmail, $password)
+{
+    $loginOrEmail = $link->real_escape_string($loginOrEmail);
+
+    $sql = "SELECT id, username, password_hash FROM users WHERE email = '$loginOrEmail' OR username = '$loginOrEmail' LIMIT 1";
     $result = $link->query($sql);
 
     if ($result && $result->num_rows > 0) {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password_hash'])) {
-            return $user; ## Успешный вход
-        }
-    }
-    return false; ## Ошибка аутентификации
+            $_SESSION['user'] = ['id' => $user['id'], 'username' => $user['username']];
+            return 'success';
+        } else return 'invalid_password';
+    } else return 'user_not_found';
 }

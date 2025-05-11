@@ -173,3 +173,24 @@
 .authorisation_button:hover .authorisation_button_x_img {
     filter: invert(1);
 }
+
+/* Ошибки заполнения */
+.auth_error_message_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth_error_message {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.auth_error {
+    color: red;
+}
