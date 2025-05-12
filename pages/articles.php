@@ -66,11 +66,8 @@ array_pop($allArticles);
             foreach ($allArticles as $article):?>
                 <div class="article_container" data-article-id="<?= $article['id'] ?>"
                      data-saved="<?= in_array($article['id'], $savedArticles) ? 'true' : 'false' ?>">
-                    <svg class="save-icon <?= in_array($article['id'], $savedArticles) ? 'saved' : '' ?>" width="22"
-                         height="29" viewBox="0 0 22 29" onclick="toggleSave(<?= $article['id'] ?>)" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.48686 28.7543C2.18286 28.7543 2.58514 28.4057 3.93771 27.0537L10.4331 20.5714C10.5 20.5177 10.5669 20.464 10.6206 20.464C10.6874 20.464 10.7406 20.5177 10.808 20.5714L17.3166 27.0537C18.6429 28.3794 19.0714 28.7543 19.7543 28.7543C20.5983 28.7543 21.2411 28.2457 21.2411 27.0269V4.192C21.2411 1.40629 19.8617 0 17.0891 0H4.152C1.39314 0 0 1.40571 0 4.192V27.0263C0 28.2457 0.656572 28.7543 1.48686 28.7543ZM2.62012 24.8771C2.43269 25.0646 3.12012 25.6314 3.12012 25.3771L10.808 18.8771C10.808 17.5377 5.75398 21.4977 7.14712 21.4977L3.12012 25.3771C4.51269 25.3771 10.808 17.5383 10.808 18.8771L18.3335 26.0951C18.3335 26.3494 18.9377 25.6743 18.7497 25.4994L11.2909 18.1211C11.0629 17.88 11.0091 18.8771 10.808 18.8771C10.6206 18.8771 10.1926 17.88 9.95143 18.1211L2.62012 24.8771Z"
-                              fill="#2C2C2C"/>
+                    <svg class="save-icon <?= in_array($article['id'], $savedArticles) ? 'saved' : '' ?>" xmlns="http://www.w3.org/2000/svg" width="23" height="32" viewBox="0 0 23 32" fill="none" onclick="toggleSave(<?= $article['id'] ?>)">
+                        <path d="M21.1601 28.3468V1.77441H1.83826V28.3468L11.2701 20.8001L21.1601 28.3468Z" stroke="black" stroke-width="3"/>
                     </svg>
                     <img src="<?= $article['imagesParts'][0] ?>" alt="" class="article_img">
                     <a href="<?php extract(PageById($link, $article['page_id']));
