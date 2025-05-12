@@ -201,6 +201,7 @@ header {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .header_button:hover {
     background-color: var(--hover-golden);
 }
@@ -209,9 +210,11 @@ header {
     fill: var(--secondary-platinum);
     transition: 0.3s;
 }
+
 .avatar_svg:hover .avatar_svg_path {
     fill: var(--hover-golden);
 }
+
 /* Главная */
 .home {
     background-color: var(--primary-white-smoke);
@@ -858,4 +861,15 @@ footer {
     font-weight: 500;
     line-height: 144%;
     letter-spacing: 0.96px;
+}
+
+/* Keyframes */
+@keyframes bookmark {
+    0% {
+        stroke-dasharray: 0 200;
+        stroke-dashoffset: 80;
+    }
+    100% {
+        stroke-dasharray: 200 0;
+    }
 }

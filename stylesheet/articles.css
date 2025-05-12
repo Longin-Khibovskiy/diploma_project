@@ -40,15 +40,19 @@ h3 {
     position: absolute;
     margin-left: 286px;
     margin-top: 28px;
-    transition: transform 0.3s;
 }
 
-.save-icon:hover {
-    transform: scale(1.1);
+.save-icon path {
+    stroke: var(--primary-eerie-black);
+    fill: #dddddd00;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
 }
 
 .save-icon.saved path {
-    fill: var(--hover-golden);
+    fill: var(--primary-eerie-black);
+    animation: bookmark 0.5s linear;
+    transition-delay: 0.5s;
 }
 
 .article_img {
