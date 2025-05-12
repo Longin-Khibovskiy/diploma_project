@@ -39,6 +39,7 @@
     --primary-eerie-black: #2C2C2C;
     --secondary-white-smoke: #F3F3F3;
     --tertiary-battleship-gray: rgba(75, 75, 75, 0.64);
+    --tertiary-battleship-gray_light: rgba(75, 75, 75, 0.1);
     --hover-silver-text: #AAAAAA;
     --hover-gold: #E0BD43;
 
@@ -203,7 +204,7 @@ header {
 }
 
 .header_button:hover {
-    background-color: var(--hover-golden);
+    background-color: var(--hover-gold);
 }
 
 .avatar_svg_path {
@@ -212,7 +213,55 @@ header {
 }
 
 .avatar_svg:hover .avatar_svg_path {
-    fill: var(--hover-golden);
+    fill: var(--hover-gold);
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--secondary-white-smoke);
+    margin-top: 12px;
+    min-width: 160px;
+    z-index: 100;
+}
+
+.dropdown-container.dropdown-open .dropdown-menu.dropdown-active {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 10px var(--tertiary-battleship-gray_light),
+    1px 1px 10px var(--tertiary-battleship-gray_light);
+    width: 200px;
+}
+
+.dropdown-menu a {
+    padding: 24px 16px;
+    color: var(--primary-eerie-black);
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--hover-gold);
+}
+
+.dropdown-menu hr {
+    margin: 0 12px;
+    width: -webkit-fill-available;
+    border: 0.5px solid var(--hover-gold);
 }
 
 /* Главная */
