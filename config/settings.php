@@ -95,18 +95,22 @@ function ShowSvgIcons($folder = 'images/icons/')
         'pinterest' => 'https://pinterest.com',
         'telegram' => 'https://t.me/longin_kh'
     ];
-    $files = scandir($folder);
+
+    $fullPath = $_SERVER['DOCUMENT_ROOT'] . '/' . $folder;
+
+    $files = scandir($fullPath);
     $html = '';
 
     foreach ($files as $file) {
         if (in_array($file, ['.', '..'])) continue;
         $icon_name = pathinfo($file, PATHINFO_FILENAME);
-        $icon_url = $links[$icon_name];
+        $icon_url = $links[$icon_name] ?? '#';
 
         $html .= sprintf(
-            '<a href="%s" target="_blank"><img src="%s" class="footer_icon" alt="%s"></a>',
+            '<a href="%s" target="_blank"><img src="/%s%s" class="footer_icon" alt="%s"></a>', // Добавил слэш перед путем
             htmlspecialchars($icon_url),
-            htmlspecialchars($folder . $file),
+            htmlspecialchars($folder),
+            htmlspecialchars($file),
             htmlspecialchars($icon_name)
         );
     }
