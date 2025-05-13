@@ -21,7 +21,7 @@ session_start(); ?>
                 </svg>
                 <div class="dropdown-menu">
                     <a href="/profile"><p>Профиль</p></a>
-                    <a href="#"><p>Сохраненные</p></a>
+                    <a href="/user/saved"><p>Сохраненные</p></a>
                     <hr>
                     <a href="/logout"><p>Выйти</p></a>
                 </div>

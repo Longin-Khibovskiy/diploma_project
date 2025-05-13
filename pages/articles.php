@@ -1,7 +1,5 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_article'])) {
-    header('Content-Type: application/json');
-
     if (!isset($_SESSION['user'])) {
         echo json_encode(['error' => 'Требуется авторизация']);
         exit;
