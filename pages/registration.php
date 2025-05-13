@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
         if ($userId) {
             $_SESSION['registration_success'] = true;
             header("Location: /");
-            $_SESSION['user'] = ['id' => $userId, 'email' => $email, 'username' => $username];
+            $_SESSION['user'] = ['id' => $userId, 'username' => $username, 'email' => $email];
             exit;
         } else {
             $errors[] = "Логин или email уже существует";

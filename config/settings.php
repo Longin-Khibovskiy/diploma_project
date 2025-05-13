@@ -181,13 +181,13 @@ function LoginUser($link, $loginOrEmail, $password)
 {
     $loginOrEmail = $link->real_escape_string($loginOrEmail);
 
-    $sql = "SELECT id, username, password_hash FROM users WHERE email = '$loginOrEmail' OR username = '$loginOrEmail' LIMIT 1";
+    $sql = "SELECT id, username, password_hash, email FROM users WHERE email = '$loginOrEmail' OR username = '$loginOrEmail' LIMIT 1";
     $result = $link->query($sql);
 
     if ($result && $result->num_rows > 0) {
         $user = $result->fetch_assoc();
         if (password_verify($password, $user['password_hash'])) {
-            $_SESSION['user'] = ['id' => $user['id'], 'username' => $user['username']];
+            $_SESSION['user'] = ['id' => $user['id'], 'username' => $user['username'], 'email' => $user['email']];
             return 'success';
         } else return 'invalid_password';
     } else return 'user_not_found';
