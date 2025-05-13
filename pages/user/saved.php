@@ -73,7 +73,7 @@ if (empty($_SESSION['csrf_token'])) $_SESSION['csrf_token'] = bin2hex(random_byt
                 </div>
             <?php endforeach; ?>
         <?php else: ?>
-            <p class="user_saved_zero_message">😢 Ваша коллекция пуста. Сохраняйте понравившиеся статьи!</p>
+            <p class="user_saved_zero_message">Ваша коллекция пуста. Сохраняйте понравившиеся <a href="/articles">статьи!</a></p>
         <?php endif; ?>
     </div>
 </section>
