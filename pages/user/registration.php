@@ -1,6 +1,7 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . '/tpl/_head.php' ?>
 <?php
 session_start();
+
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }
@@ -33,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
     }
 
     $_SESSION['registration_errors'] = $errors;
-    header("Location: /registration");
+    header("Location: /user/registration");
     exit;
 }
 ?>
@@ -75,7 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
                     <button class="hover_button_black_orange" type="submit">
                         Зарегистрироваться
                     </button>
-                    <a href="/authorisation" class="registration_link_to_auth">У вас уже есть аккаунт? Нажмите здесь,
+                    <a href="/user/authorisation" class="registration_link_to_auth">У вас уже есть аккаунт? Нажмите
+                        здесь,
                         чтобы войти.</a>
                 </div>
             </form>

@@ -11,7 +11,7 @@
             <hr>
             <div class="profile_data_password_container">
                 <p class="small">Пароль</p>
-                <p class="profile_forgot_password"><a href="/forgot">Сменить пароль</a></p>
+                <p class="profile_forgot_password"><a href="../../index.php">Сменить пароль</a></p>
             </div>
         </div>
     </div>

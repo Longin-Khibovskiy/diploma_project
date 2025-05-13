@@ -20,14 +20,14 @@ session_start(); ?>
                           fill="#E8E8E8"/>
                 </svg>
                 <div class="dropdown-menu">
-                    <a href="/profile"><p>Профиль</p></a>
+                    <a href="/user/profile"><p>Профиль</p></a>
                     <a href="/user/saved"><p>Сохраненные</p></a>
                     <hr>
                     <a href="/logout"><p>Выйти</p></a>
                 </div>
             </div>
         <?php else: ?>
-            <a href="/authorisation">
+            <a href="/user/authorisation">
                 <button class="header_button">Войти</button>
             </a>
         <?php endif; ?>
