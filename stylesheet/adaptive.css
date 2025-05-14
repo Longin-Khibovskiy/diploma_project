@@ -1,0 +1,308 @@
+@media (max-width: 1400px) {
+    .art_fashion_container {
+        display: none;
+    }
+
+    .art_fashion_container.min-screen {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: clamp(0.75rem, calc(0.23rem + 2.59vw), 2.5rem);
+    }
+
+    .art_fashion_container.min-screen p {
+        margin: 0;
+    }
+
+    .lux_history_right_img {
+        display: none;
+    }
+
+    .lux_three_container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1240px) {
+    .fashion_and_pop_img_container img:nth-child(1) {
+        display: none;
+    }
+
+    .fashion_and_pop_img_container img:nth-child(2) {
+        margin-top: 0;
+    }
+
+    .fashion_and_pop_img_container.second {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 1124px) {
+    /* header */
+    header {
+        padding: 24px var(--padding-sides);
+    }
+
+    .nav_link:nth-child(2n-2) {
+        display: none;
+    }
+
+    .nav_link:nth-child(3) {
+        display: none;
+    }
+
+    /* Home page */
+    .title_grid {
+        padding: 24px var(--padding-sides) 0 var(--padding-sides);
+    }
+
+    .author_page {
+        display: none;
+    }
+
+    .whats_amazing_img {
+        display: none;
+    }
+
+    .art_fashion_container.min-screen img {
+        width: clamp(16.25rem, calc(15.14rem + 5.56vw), 20rem);
+    }
+
+    .houses_and_artists_title_container {
+        flex-wrap: wrap;
+    }
+
+    .houses_first_container {
+        flex-wrap: wrap;
+    }
+
+    .houses_imgs_container {
+        display: none;
+    }
+
+    .house_second_container {
+        flex-wrap: wrap;
+    }
+
+    .house_third_container img:nth-child(2) {
+        display: none;
+    }
+
+    .lux_title_container {
+        flex-wrap: wrap;
+    }
+
+    .lux_last_container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: clamp(0.75rem, calc(0.31rem + 2.22vw), 2.25rem);
+    }
+
+    .sec_lux_first_container {
+        flex-wrap: wrap;
+    }
+
+    .sec_lux_second_container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 924px) {
+    .lux_three_container img {
+        width: 47%;
+    }
+}
+
+@media (max-width: 820px) {
+    #button-up {
+        display: none !important;
+    }
+
+    .whats_container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .whats_left, .whats_right {
+        width: 100%;
+        align-items: center;
+    }
+
+    .whats_first_text, .whats_other_text {
+        width: 100%;
+    }
+
+    .whats_first_text {
+        margin-bottom: clamp(0.75rem, calc(0.23rem + 2.59vw), 2.5rem);
+    }
+
+    .whats_other_text {
+        margin-bottom: clamp(0.5rem, calc(0.28rem + 1.11vw), 1.25rem);
+    }
+
+    .whats_left_img {
+        max-width: 260px;
+        margin-top: 0;
+    }
+
+    .whats_first_right_img {
+        display: none;
+    }
+
+    .whats_right_text {
+        margin: clamp(0.75rem, calc(0.23rem + 2.59vw), 2.5rem) 0;
+    }
+
+    .whats_right_img:nth-child(1) {
+        margin-right: clamp(0.5rem, calc(-0.09rem + 2.96vw), 2.5rem);
+    }
+
+    .houses_first_container img {
+        width: 80%;
+    }
+
+    .house_second_img {
+        width: 80%;
+        height: auto;
+    }
+
+    .house_third_container img:nth-child(3) {
+        display: none;
+    }
+
+    .house_last_container {
+        justify-content: center;
+    }
+
+    .house_last_container img {
+        width: 80%;
+        height: auto;
+    }
+
+    .lux_history_left_img_container {
+        justify-content: space-between;
+    }
+
+    .lux_history_left_img_container img {
+        width: 48%;
+    }
+
+    .lux_last_container img {
+        width: 90%;
+    }
+
+    .swiper {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .swiper-scrollbar {
+        display: none;
+    }
+
+    .fashion_and_pop_container {
+        flex-wrap: wrap;
+    }
+
+    .fashion_and_pop_img_min_size {
+        display: block;
+    }
+
+    .fashion_and_pop_img_container.second {
+        display: none;
+    }
+
+    .footer_grid {
+        grid-template-columns: repeat(2, 2fr);
+        row-gap: 24px;
+    }
+
+    .footer_grid div:nth-child(2n) {
+        align-items: end;
+    }
+}
+
+@media (max-width: 640px) {
+    .fashion_and_pop_img_min_size {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .home_video {
+        padding: 0 var(--padding-sides);
+    }
+
+    .art_fashion_container {
+        margin-top: 0;
+    }
+
+    .art_fashion_container.min-screen {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .art_fashion_container.min-screen p {
+        margin-top: 12px;
+    }
+
+    .houses_first_container img {
+        width: 100%;
+    }
+
+    .house_second_img {
+        width: 100%;
+    }
+
+    .house_last_container img {
+        width: 100%;
+    }
+
+    .lux_last_container img {
+        width: 100%;
+    }
+
+    .hover_button_white_black {
+        padding: 12px 78px;
+    }
+
+    .fashion_and_pop_right_container .hover_button_black_orange {
+        padding: 12px 78px;;
+    }
+
+    .footer_brands {
+        display: none;
+    }
+}
+
+@media (max-width: 394px) {
+    .whats_imgs_container {
+        justify-content: space-between;
+    }
+
+    .whats_right_img {
+        width: 160px;
+        height: auto;
+    }
+
+    .hover_button_black_orange {
+        padding: 12px 78px;
+    }
+
+    .lux_three_container {
+        flex-wrap: wrap;
+    }
+
+    .lux_three_container img {
+        width: 100%;
+    }
+
+    .lux_last_container .hover_button_white_black {
+        padding: 12px 60px;
+    }
+
+    .fashion_and_pop_right_container .hover_button_black_orange {
+        padding: 12px 70px;;
+    }
+}

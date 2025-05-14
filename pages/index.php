@@ -66,11 +66,19 @@
         <div class="art_fashion">
             <?php extract(FindById($link, 2)); ?>
             <h3><?= $title ?></h3>
-            <div class="art_fashion_container">
+            <div class="art_fashion_container max-screen">
                 <?php for ($i = 0; $i <= 2; $i++): ?>
                     <p><?= $descriptionParts[$i] ?></p>
                     <img src="<?= $imagesParts[$i] ?>" alt="">
                 <?php endfor ?>
+            </div>
+            <div class="art_fashion_container min-screen">
+                <p><?= $descriptionParts[0] ?></p>
+                <img src="<?= $imagesParts[1] ?>" alt="">
+                <p><?= $descriptionParts[2] ?></p>
+                <img src="<?= $imagesParts[0] ?>" alt="">
+                <p><?= $descriptionParts[1] ?></p>
+                <img src="<?= $imagesParts[2] ?>" alt="">
             </div>
             <div class="art_fashion_button_container">
                 <a href="/articles/art_fashion" class="link_for_button">
@@ -136,7 +144,7 @@
                         <?php endforeach ?>
                     </div>
                 </div>
-                <img src="<?= $imagesParts[2] ?>" alt="">
+                <img src="<?= $imagesParts[2] ?>" alt="" class="lux_history_right_img">
             </div>
             <div class="lux_three_container">
                 <p><?= $descriptionParts[1] ?></p>
@@ -203,10 +211,11 @@
                         <?php foreach (array_slice($imagesParts, 0, 2) as $part) : ?>
                             <img src="<?= $part ?>" alt="">
                         <?php endforeach ?>
+                        <img src="<?= $imagesParts[3] ?>" alt="" class="fashion_and_pop_img_min_size">
                     </div>
                 </div>
                 <div class="fashion_and_pop_right_container">
-                    <div class="fashion_and_pop_img_container">
+                    <div class="fashion_and_pop_img_container second">
                         <?php foreach (array_slice($imagesParts, 2, 2) as $part) : ?>
                             <img src="<?= $part ?>" alt="">
                         <?php endforeach ?>

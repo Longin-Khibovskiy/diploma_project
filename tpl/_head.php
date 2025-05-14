@@ -14,6 +14,7 @@
     $cssPath = "stylesheet/{$currentPage}.css";
     if (file_exists($cssPath)) echo "<link rel='stylesheet' href='/{$cssPath}'>";
     ?>
+    <link rel="stylesheet" href="/stylesheet/adaptive.css">
     <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js' defer></script>
     <script src="/js/main.js" defer></script>
 </head>
