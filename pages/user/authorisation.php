@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                     <img src="/images/authorisation/google.svg" alt="">
                     <span>Авторизоваться через Google</span>
                 </button>
-                <button class="authorisation_button">
+                <button class="authorisation_button" onclick="location.href='/auth_with_x';">
                     <img src="/images/authorisation/x.svg" alt="" class="authorisation_button_x_img">
                     <span>Авторизоваться через X</span>
                 </button>

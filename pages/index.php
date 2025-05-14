@@ -73,7 +73,7 @@
                 <?php endfor ?>
             </div>
             <div class="art_fashion_button_container">
-                <a href="/art_fashion" class="link_for_button">
+                <a href="/articles/art_fashion" class="link_for_button">
                     <button class="hover_button_black_orange">Подробнее</button>
                 </a>
             </div>
@@ -145,7 +145,7 @@
                 <?php endforeach ?>
             </div>
             <div class="lux_last_container">
-                <a href="/luxury_mass_market" class="link_for_button">
+                <a href="/articles/luxury_mass_market" class="link_for_button">
                     <button class="hover_button_white_black">Открыть статью</button>
                 </a>
                 <img src="<?= $imagesParts[5] ?>" alt="">
@@ -214,7 +214,7 @@
                     <div class="fashion_and_pop_right_text_container">
                         <p class="fashion_and_pop_right_text"><?= $descriptionParts[2] ?></p>
                     </div>
-                    <a href="/pop_culture_fashion" class="link_for_button">
+                    <a href="/articles/pop_culture_fashion" class="link_for_button">
                         <button class="hover_button_black_orange">Открыть статью</button>
                     </a>
                 </div>

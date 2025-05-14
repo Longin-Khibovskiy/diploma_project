@@ -103,7 +103,7 @@ array_pop($allArticles);
         })
         <?php else: ?>
         if (confirm('Для сохранения статей войдите в систему!')) {
-            window.location.href = '/authorisation';
+            window.location.href = '/user/authorisation';
         }
         <?php endif; ?>
     }

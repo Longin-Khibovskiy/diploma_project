@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
                     <img src="/images/registration/google.svg" alt="">
                     <span>Авторизоваться через Google</span>
                 </button>
-                <button class="registration_button">
+                <button class="registration_button" onclick="location.href='/auth_with_x';">
                     <img src="/images/registration/x.svg" alt="" class="registration_button_x_img">
                     <span>Авторизоваться через X</span>
                 </button>
