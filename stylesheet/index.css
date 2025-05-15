@@ -56,6 +56,7 @@
     --padding-sides: clamp(0.75rem, calc(-0.88rem + 8.15vw), 6.25rem);
     --padding-180-48: clamp(3rem, calc(0.56rem + 12.22vw), 11.25rem);
     --padding-140-40: clamp(2.5rem, calc(0.65rem + 9.26vw), 8.75rem);
+    --padding-80-36: clamp(2.25rem, calc(1.44rem + 4.07vw), 5rem);
     --padding-72-32: clamp(2rem, calc(1.26rem + 3.7vw), 4.5rem);
     --padding-60-24: clamp(1.5rem, calc(0.83rem + 3.33vw), 3.75rem);
     --padding-48-20: clamp(1.25rem, calc(0.73rem + 2.59vw), 3rem);
@@ -96,7 +97,8 @@ h3 {
 }
 
 h4 {
-    font-size: 48px;
+    font-size: clamp(1.25rem, calc(0.73rem + 2.59vw), 3rem);
+    /*font-size: 48px;*/
 }
 
 p {
@@ -909,8 +911,9 @@ footer {
 
 /* 404 Error */
 .error_404_container {
-    padding: 100px 100px;
+    padding: var(--padding-sides);
     width: 100%;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -921,7 +924,7 @@ footer {
     text-align: center;
     color: var(--primary-eerie-black);
     font-family: kudry;
-    font-size: 180px;
+    font-size: clamp(6.25rem, calc(4.77rem + 7.41vw), 11.25rem);
     font-style: normal;
     font-weight: 500;
     letter-spacing: 12px;
@@ -929,7 +932,7 @@ footer {
 
 .error_404_text {
     font-family: playfair-light;
-    font-size: 24px;
+    font-size: clamp(1rem, calc(0.85rem + 0.74vw), 1.5rem);
     font-style: normal;
     font-weight: 500;
     line-height: 144%;
