@@ -10,7 +10,7 @@
 .profile_container {
     width: 100%;
     max-width: 1600px;
-    padding: 140px 100px;
+    padding: var(--padding-140-40) var(--padding-sides);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,14 +19,14 @@
 }
 
 .profile_data {
-    margin-top: 40px;
+    margin-top: var(--padding-40-16);
     background-color: var(--secondary-timberwolf);
     min-width: 400px;
     max-width: 450px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--padding-24-12);
 }
 
 .profile_data_title {
@@ -38,7 +38,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--padding-8-2);
 }
 
 hr {

@@ -529,6 +529,11 @@
     .registration_main_container {
         margin-top: 32px;
     }
+
+    /*  Profile  */
+    .profile_data {
+        min-width: 300px;
+    }
 }
 
 @media (max-width: 394px) {
