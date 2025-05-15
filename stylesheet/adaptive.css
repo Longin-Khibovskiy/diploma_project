@@ -30,6 +30,11 @@
     .fashion_and_pop_img_container.second {
         justify-content: flex-end;
     }
+
+    /*  Art fashion  */
+    .art_and_fashion_header_img_container img:nth-child(2) {
+        display: none;
+    }
 }
 
 @media (max-width: 1124px) {
@@ -77,6 +82,20 @@
     .sec_lux_second_container {
         flex-wrap: wrap;
         flex-direction: column-reverse;
+    }
+
+    /*  Art fashion  */
+    .art_and_fashion_first_work_container {
+        flex-wrap: wrap;
+    }
+
+    .art_and_fashion_sixties_right_img {
+        display: none;
+    }
+
+    .art_and_fashion_nineties_container {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 }
 
@@ -193,11 +212,44 @@
     .footer_grid div:nth-child(2n) {
         align-items: end;
     }
+
+    /*  Art fashion  */
+    .art_and_fashion_header_img_container img {
+        width: 70%;
+    }
+
+    .art_and_fashion_sixties_left_container img {
+        width: 100%;
+    }
+
+    .art_and_fashion_nineties_container img {
+        width: 44%;
+    }
+
+    .art_and_fashion_last_up_container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .art_and_fashion_last_up_container img {
+        display: block !important;
+        width: 47%;
+    }
+
+    .art_and_fashion_last_down_container {
+        display: none;
+    }
 }
 
 @media (max-width: 640px) {
     .fashion_and_pop_img_min_size {
         display: none;
+    }
+
+    /*  Art fashion  */
+    .art_and_fashion_header_text {
+        max-width: 90%;
     }
 }
 
@@ -233,6 +285,11 @@
     .footer_brands {
         display: none;
     }
+
+    /*  Art fashion  */
+    .art_and_fashion_header_img_container img {
+        width: 90%;
+    }
 }
 
 @media (max-width: 394px) {
@@ -263,5 +320,18 @@
 
     .fashion_and_pop_right_container .hover_button_black_orange {
         padding: 12px 70px;;
+    }
+
+    /*  Art fashion  */
+    .art_and_fashion_header_text {
+        max-width: 100%;
+    }
+
+    .art_and_fashion_last_up_container img {
+        width: 80%;
+    }
+
+    .art_and_fashion_last_up_container img:nth-child(3) {
+        display: none !important;
     }
 }

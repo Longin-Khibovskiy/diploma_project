@@ -28,7 +28,7 @@
                 <p><?= $descriptionParts[2] ?></p>
                 <img src="<?= $imagesParts[5] ?>" alt="">
             </div>
-            <img src="<?= $imagesParts[6] ?>" alt="">
+            <img src="<?= $imagesParts[6] ?>" alt="" class="art_and_fashion_sixties_right_img">
         </div>
         <div class="art_and_fashion_nineties_container">
             <?php foreach (array_slice($imagesParts, 7, 2) as $part) : ?>
@@ -44,6 +44,7 @@
                     <?php endforeach ?>
                 </div>
                 <img src="<?= $imagesParts[9] ?>" alt="">
+                <img src="<?= $imagesParts[10] ?>" alt="" style="display:none;">
             </div>
             <div class="art_and_fashion_last_down_container">
                 <img src="<?= $imagesParts[10] ?>" alt="">

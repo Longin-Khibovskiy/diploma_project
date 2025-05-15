@@ -51,7 +51,15 @@
 
     /* Icon */
     --default-platinum: #E8E8E8;
+
+    /* Paddings and margins */
     --padding-sides: clamp(0.75rem, calc(-0.88rem + 8.15vw), 6.25rem);
+    --padding-180-48: clamp(3rem, calc(0.56rem + 12.22vw), 11.25rem);
+    --padding-140-40: clamp(2.5rem, calc(0.65rem + 9.26vw), 8.75rem);
+    --padding-72-32: clamp(2rem, calc(1.26rem + 3.7vw), 4.5rem);
+    --padding-60-24: clamp(1.5rem, calc(0.83rem + 3.33vw), 3.75rem);
+    --padding-40-16: clamp(1rem, calc(0.56rem + 2.22vw), 2.5rem);
+    --padding-24-12: clamp(0.75rem, calc(0.53rem + 1.11vw), 1.5rem);
 }
 
 * {

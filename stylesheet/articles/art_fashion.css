@@ -10,7 +10,7 @@
 .art_and_fashion_container {
     width: 100%;
     max-width: 1600px;
-    padding: 140px 100px;
+    padding: var(--padding-140-40) var(--padding-sides);
 }
 
 .art_and_fashion_header_container {
@@ -18,57 +18,57 @@
 }
 
 .art_and_fashion_header_text {
-    margin: 72px 0 60px 0;
+    margin: var(--padding-72-32) 0 var(--padding-60-24) 0;
     max-width: 70%;
 }
 
 .art_and_fashion_header_img_container {
     width: 100%;
     display: flex;
-    gap: 40px;
+    gap: var(--padding-40-16);
     align-items: flex-start;
 }
 
 .art_and_fashion_first_work_container {
-    margin: 140px 0 180px 0;
+    margin: var(--padding-140-40) 0 var(--padding-180-48) 0;
     width: 100%;
     display: flex;
-    gap: 40px;
+    gap: var(--padding-40-16);
 }
 .art_and_fashion_sixties_container {
     width: 100%;
     display: flex;
     align-items: flex-start;
-    gap: 40px;
+    gap: var(--padding-40-16);
 }
 .art_and_fashion_sixties_left_container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: var(--padding-60-24);
 }
 .art_and_fashion_nineties_container {
     width: 100%;
     display: flex;
     align-items: flex-start;
-    gap: 40px;
-    margin: 140px 0 180px 0;
+    gap: var(--padding-40-16);
+    margin: var(--padding-140-40) 0 var(--padding-180-48) 0;
 }
 .art_and_fashion_last_container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: var(--padding-60-24);
 }
 .art_and_fashion_last_up_container {
     width: 100%;
     display: flex;
     align-items: flex-start;
-    gap: 40px;
+    gap: var(--padding-40-16);
 }
 .art_and_fashion_last_up_text_container {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--padding-24-12);
 }
 .art_and_fashion_last_down_container {
     width: 100%;
