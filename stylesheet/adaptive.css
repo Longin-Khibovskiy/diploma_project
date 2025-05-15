@@ -53,6 +53,11 @@
     .articles_container {
         display: flex;
     }
+
+    /* Saved */
+    .users_saved_container {
+        display: flex;
+    }
 }
 
 @media (max-width: 1240px) {
@@ -187,6 +192,10 @@
     .back_to_home_link svg path {
         fill: var(--primary-eerie-black);
     }
+
+    .user_saved_container {
+        height: 460px;
+    }
 }
 
 @media (max-width: 924px) {
@@ -211,6 +220,11 @@
     }
 
     .article_img {
+        width: 319px;
+    }
+
+    /*  Saved  */
+    .user_saved_img {
         width: 319px;
     }
 }
@@ -398,6 +412,11 @@
     .registration_main_container {
         margin-top: 24px;
     }
+
+    /*  Saved  */
+    .users_saved_container {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 640px) {
@@ -454,6 +473,11 @@
     /*  Authorisation and registration  */
     .back_to_home_link svg {
         display: none;
+    }
+
+    /*  Saved  */
+    .user_saved_container {
+        height: 428px;
     }
 }
 
