@@ -1,5 +1,5 @@
 @media (max-width: 1400px) {
-    .art_fashion_container {
+    .art_fashion_container, .lux_history_right_img {
         display: none;
     }
 
@@ -11,10 +11,6 @@
 
     .art_fashion_container.min-screen p {
         margin: 0;
-    }
-
-    .lux_history_right_img {
-        display: none;
     }
 
     .lux_three_container {
@@ -42,11 +38,7 @@
         padding: 24px var(--padding-sides);
     }
 
-    .nav_link:nth-child(2n-2) {
-        display: none;
-    }
-
-    .nav_link:nth-child(3) {
+    .nav_link:nth-child(2n-2), .nav_link:nth-child(3) {
         display: none;
     }
 
@@ -55,11 +47,10 @@
         padding: 24px var(--padding-sides) 0 var(--padding-sides);
     }
 
-    .author_page {
-        display: none;
-    }
-
-    .whats_amazing_img {
+    .author_page,
+    .whats_amazing_img,
+    .houses_imgs_container,
+    .house_third_container img:nth-child(2) {
         display: none;
     }
 
@@ -67,27 +58,11 @@
         width: clamp(16.25rem, calc(15.14rem + 5.56vw), 20rem);
     }
 
-    .houses_and_artists_title_container {
-        flex-wrap: wrap;
-    }
-
-    .houses_first_container {
-        flex-wrap: wrap;
-    }
-
-    .houses_imgs_container {
-        display: none;
-    }
-
-    .house_second_container {
-        flex-wrap: wrap;
-    }
-
-    .house_third_container img:nth-child(2) {
-        display: none;
-    }
-
-    .lux_title_container {
+    .houses_and_artists_title_container,
+    .houses_first_container,
+    .house_second_container,
+    .lux_title_container,
+    .sec_lux_first_container {
         flex-wrap: wrap;
     }
 
@@ -97,10 +72,6 @@
         justify-content: flex-start;
         align-items: flex-start;
         gap: clamp(0.75rem, calc(0.31rem + 2.22vw), 2.25rem);
-    }
-
-    .sec_lux_first_container {
-        flex-wrap: wrap;
     }
 
     .sec_lux_second_container {
@@ -247,28 +218,16 @@
         margin-top: 12px;
     }
 
-    .houses_first_container img {
-        width: 100%;
-    }
-
-    .house_second_img {
-        width: 100%;
-    }
-
-    .house_last_container img {
-        width: 100%;
-    }
-
+    .houses_first_container img,
+    .house_second_img,
+    .house_last_container img,
     .lux_last_container img {
         width: 100%;
     }
 
-    .hover_button_white_black {
-        padding: 12px 78px;
-    }
-
+    .hover_button_white_black,
     .fashion_and_pop_right_container .hover_button_black_orange {
-        padding: 12px 78px;;
+        padding: 12px 78px;
     }
 
     .footer_brands {
