@@ -10,7 +10,7 @@
 .lux_market_container {
     width: 100%;
     max-width: 1600px;
-    padding: 140px 100px;
+    padding: var(--padding-140-40) var(--padding-sides);
 }
 
 .lux_market_header_container,
@@ -21,13 +21,13 @@
 .lux_market_last_container {
     width: 100%;
     display: flex;
-    gap: 40px;
+    gap: var(--padding-40-16);
     align-items: flex-start;
 }
 
 
 .lux_market_header_container {
-    margin-top: 72px;
+    margin-top: var(--padding-72-32);
 }
 
 .lux_market_header_left_container,
@@ -38,12 +38,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 60px;
+    gap: var(--padding-60-24);
 }
 
 .lux_market_seventh_container,
 .lux_market_thirteenth_container {
-    margin: 140px 0;
+    margin: var(--padding-140-40) 0;
 }
 
 .lux_market_tenth_img_container,
@@ -56,5 +56,5 @@
 }
 
 .lux_market_last_container {
-    margin-top: 140px;
+    margin-top: var(--padding-140-40);
 }

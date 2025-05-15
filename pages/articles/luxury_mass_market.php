@@ -7,17 +7,17 @@
                 <p><?= $descriptionParts[0] ?></p>
                 <img src="<?= $imagesParts[0] ?>" alt="">
             </div>
-            <img src="<?= $imagesParts[1] ?>" alt="">
+            <img src="<?= $imagesParts[1] ?>" alt="" class="lux_market_header_right_img">
         </div>
         <div class="lux_market_seventh_container">
             <div class="lux_market_seventh_left_container">
                 <p><?= $descriptionParts[1] ?></p>
                 <img src="<?= $imagesParts[3] ?>" alt="">
             </div>
-            <img src="<?= $imagesParts[2] ?>" alt="">
+            <img src="<?= $imagesParts[2] ?>" alt="" class="lux_market_seventh_right_img">
         </div>
         <div class="lux_market_tenth_container">
-            <img src="<?= $imagesParts[4] ?>" alt="">
+            <img src="<?= $imagesParts[4] ?>" alt="" class="lux_market_tenth_left_img">
             <div class="lux_market_tenth_right_container">
                 <p><?= $descriptionParts[2] ?></p>
                 <div class="lux_market_tenth_img_container">

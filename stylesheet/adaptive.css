@@ -16,6 +16,21 @@
     .lux_three_container {
         flex-wrap: wrap;
     }
+
+    /*  Lux and mass market  */
+    .lux_market_seventh_right_img,
+    .lux_market_tenth_left_img,
+    .lux_market_thirteenth_left_container img {
+        display: none;
+    }
+
+    .lux_market_tenth_right_container p {
+        width: 70%;
+    }
+
+    .lux_market_thirteenth_container img {
+        width: 60%;
+    }
 }
 
 @media (max-width: 1240px) {
@@ -33,6 +48,19 @@
 
     /*  Art fashion  */
     .art_and_fashion_header_img_container img:nth-child(2) {
+        display: none;
+    }
+
+    /*  Lux and mass market  */
+    .lux_market_fifteenth_container img {
+        width: 50%;
+    }
+
+    .lux_market_last_container img {
+        width: 50%;
+    }
+
+    .lux_market_last_right_container .lux_market_last_img_container {
         display: none;
     }
 }
@@ -96,6 +124,11 @@
     .art_and_fashion_nineties_container {
         flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+
+    /*  Lux and mass market  */
+    .lux_market_header_right_img {
+        display: none;
     }
 }
 
@@ -240,6 +273,27 @@
     .art_and_fashion_last_down_container {
         display: none;
     }
+
+    /*  Lux and mass market  */
+    .lux_market_header_left_container img {
+        width: 50%;
+    }
+
+    .lux_market_seventh_left_container img {
+        width: 70%;
+    }
+
+    .lux_market_tenth_right_container p {
+        width: 90%;
+    }
+
+    .lux_market_tenth_right_container img {
+        width: 60%;
+    }
+
+    .lux_market_thirteenth_container img {
+        width: 40%;
+    }
 }
 
 @media (max-width: 640px) {
@@ -250,6 +304,20 @@
     /*  Art fashion  */
     .art_and_fashion_header_text {
         max-width: 90%;
+    }
+
+    /*  Lux and mass market  */
+    .lux_market_fifteenth_container {
+        flex-wrap: wrap;
+    }
+
+    .lux_market_fifteenth_container img {
+        width: 80%;
+    }
+
+    .lux_market_last_container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
     }
 }
 
@@ -289,6 +357,27 @@
     /*  Art fashion  */
     .art_and_fashion_header_img_container img {
         width: 90%;
+    }
+
+    /*  Lux and mass market  */
+    .lux_market_tenth_right_container p {
+        width: 100%;
+    }
+
+    .lux_market_tenth_right_container img {
+        width: 90%;
+    }
+
+    .lux_market_thirteenth_container {
+        flex-wrap: wrap;
+    }
+
+    .lux_market_thirteenth_container img {
+        width: 80%;
+    }
+
+    .lux_market_last_container img {
+        width: 80%;
     }
 }
 
