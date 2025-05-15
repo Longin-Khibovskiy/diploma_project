@@ -31,6 +31,23 @@
     .lux_market_thirteenth_container img {
         width: 60%;
     }
+
+    /*  Fashion and pop culture  */
+    .pop_culture_header_right_img {
+        display: none;
+    }
+
+    .pop_culture_header_left_container img {
+        width: 60%;
+    }
+
+    .pop_culture_header_left_container {
+        align-items: center;
+    }
+
+    .pop_culture_thirteenth_left_img_container img {
+        width: 48%;
+    }
 }
 
 @media (max-width: 1240px) {
@@ -61,6 +78,11 @@
     }
 
     .lux_market_last_right_container .lux_market_last_img_container {
+        display: none;
+    }
+
+    /*  Fashion and pop culture  */
+    .pop_culture_balmain_right_container img:nth-child(2) {
         display: none;
     }
 }
@@ -130,11 +152,33 @@
     .lux_market_header_right_img {
         display: none;
     }
+
+    /*  Fashion and pop culture  */
+    .pop_culture_thirteenth_right_img {
+        width: 30%;
+    }
+
+    .pop_culture_simpson_img {
+        width: 40%;
+    }
+
+    .pop_culture_simpson_right_img_container img {
+        width: 70%;
+    }
+
+    .pop_culture_last_container img:nth-child(2) {
+        display: none;
+    }
 }
 
 @media (max-width: 924px) {
     .lux_three_container img {
         width: 47%;
+    }
+
+    /*  Fashion and pop culture  */
+    .pop_culture_header_left_container img {
+        width: 70%;
     }
 }
 
@@ -294,6 +338,19 @@
     .lux_market_thirteenth_container img {
         width: 40%;
     }
+
+    /*  Fashion and pop culture  */
+    .pop_culture_thirteenth_right_img {
+        display: none;
+    }
+
+    .pop_culture_balmain_right_container {
+        display: none;
+    }
+
+    .pop_culture_last_container img {
+        width: 40%;
+    }
 }
 
 @media (max-width: 640px) {
@@ -318,6 +375,28 @@
     .lux_market_last_container {
         flex-wrap: wrap;
         flex-direction: column-reverse;
+    }
+
+    /*  Fashion and pop culture  */
+    .pop_culture_simpson_right_img_container {
+        display: none;
+    }
+
+    .pop_culture_simpson_container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .pop_culture_simpson_container img {
+        width: 60%;
+    }
+
+    .pop_culture_balmain_left_container img {
+        width: 60%;
+    }
+
+    .pop_culture_last_container img {
+        width: 40%;
     }
 }
 
@@ -379,6 +458,15 @@
     .lux_market_last_container img {
         width: 80%;
     }
+
+    /*  Fashion and pop culture  */
+    .pop_culture_header_left_container img {
+        width: 90%;
+    }
+
+    .pop_culture_balmain_left_container img {
+        width: 90%;
+    }
 }
 
 @media (max-width: 394px) {
@@ -422,5 +510,10 @@
 
     .art_and_fashion_last_up_container img:nth-child(3) {
         display: none !important;
+    }
+
+    /*  Fashion and pop culture  */
+    .pop_culture_last_container img {
+        width: 30%;
     }
 }

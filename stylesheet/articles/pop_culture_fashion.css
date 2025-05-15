@@ -10,7 +10,7 @@
 .pop_culture_container {
     width: 100%;
     max-width: 1600px;
-    padding: 140px 100px;
+    padding: var(--padding-140-40) var(--padding-sides);
 }
 
 .pop_culture_header_container,
@@ -22,11 +22,11 @@
     width: 100%;
     display: flex;
     align-items: flex-start;
-    gap: 40px;
+    gap: var(--padding-40-16);
 }
 
 .pop_culture_header_container {
-    margin-top: 72px;
+    margin-top: var(--padding-72-32);
 }
 
 .pop_culture_header_left_container,
@@ -35,18 +35,18 @@
 .pop_culture_balmain_left_container {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: var(--padding-60-24);
 }
 
 .pop_culture_header_left_text_container {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--padding-24-12);
 }
 
 .pop_culture_thirteenth_container,
 .pop_culture_balmain_container {
-    margin: 140px 0;
+    margin: var(--padding-140-40) 0;
 }
 
 .pop_culture_thirteenth_left_img_container {

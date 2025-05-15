@@ -11,7 +11,7 @@
                 </div>
                 <img src="<?= $imagesParts[0] ?>" alt="">
             </div>
-            <img src="<?= $imagesParts[1] ?>" alt="">
+            <img src="<?= $imagesParts[1] ?>" alt="" class="pop_culture_header_right_img">
         </div>
         <div class="pop_culture_thirteenth_container">
             <div class="pop_culture_thirteenth_left_container">
@@ -22,10 +22,10 @@
                     <?php endforeach ?>
                 </div>
             </div>
-            <img src="<?= $imagesParts[4] ?>" alt="">
+            <img src="<?= $imagesParts[4] ?>" alt="" class="pop_culture_thirteenth_right_img">
         </div>
         <div class="pop_culture_simpson_container">
-            <img src="<?= $imagesParts[5] ?>" alt="">
+            <img src="<?= $imagesParts[5] ?>" alt="" class="pop_culture_simpson_img">
             <div class="pop_culture_simpson_right_container">
                 <p><?= $descriptionParts[3] ?></p>
                 <div class="pop_culture_simpson_right_img_container">
