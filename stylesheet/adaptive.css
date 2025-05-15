@@ -48,6 +48,11 @@
     .pop_culture_thirteenth_left_img_container img {
         width: 48%;
     }
+
+    /*  Articles  */
+    .articles_container {
+        display: flex;
+    }
 }
 
 @media (max-width: 1240px) {
@@ -179,6 +184,21 @@
     /*  Fashion and pop culture  */
     .pop_culture_header_left_container img {
         width: 70%;
+    }
+
+    .article_container {
+        height: 480px;
+    }
+}
+
+@media (max-width: 898px) {
+    /*  Articles  */
+    .articles_container {
+        display: flex;
+    }
+
+    .article_img {
+        width: 319px;
     }
 }
 
@@ -351,6 +371,11 @@
     .pop_culture_last_container img {
         width: 40%;
     }
+
+    /*  Articles  */
+    .articles_container {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 640px) {
@@ -397,6 +422,11 @@
 
     .pop_culture_last_container img {
         width: 40%;
+    }
+
+    /* Articles */
+    .article_container {
+        height: 468px;
     }
 }
 
