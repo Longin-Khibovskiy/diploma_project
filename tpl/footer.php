@@ -9,12 +9,12 @@
                 <?= PagesLinks($link) ?>
             </div>
             <?php
-            $brands = ['Supreme', 'Balmain', 'Moschino', 'Louis Vuitton', 'H&M', 'Dior', 'Chanel', 'Balenciaga'];
+            $brands = ['Supreme', 'Balmain', 'Moschino', 'Louis Vuitton', 'H&M', 'Dior', 'Balenciaga'];
             $brandGroups = array_chunk($brands, 4);
             foreach ($brandGroups as $group): ?>
                 <div class="footer_brands">
                     <?php foreach ($group as $brand): ?>
-                        <p><?= $brand ?></p>
+                        <p><a onclick="handleNavigation('#<?= $brand ?>')" class="footer_brands_link"><?= $brand ?></a></p>
                     <?php endforeach ?>
                 </div>
             <?php endforeach ?>

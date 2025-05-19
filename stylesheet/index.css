@@ -72,6 +72,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -833,9 +834,15 @@ footer {
     gap: 8px;
 }
 
-.footer_brands p {
-    color: var(--secondary-white-smoke);
+.footer_brands_link {
     cursor: pointer;
+    text-decoration: none;
+    color: var(--secondary-white-smoke);
+    transition: 0.3s;
+}
+
+.footer_brands_link:hover {
+    color: var(--hover-gold);
 }
 
 

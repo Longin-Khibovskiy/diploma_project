@@ -89,7 +89,7 @@
     </div>
     <div class="houses_and_artists">
         <?php extract(FindById($link, 3)); ?>
-        <div class="houses_and_artists_title_container">
+        <div class="houses_and_artists_title_container" id="Louis Vuitton">
             <h3><?= $title ?></h3>
             <p><?= $author ?></p>
         </div>
@@ -115,7 +115,7 @@
             </div>
         </div>
         <div class="house_third_container">
-            <div class="house_third_text_container">
+            <div class="house_third_text_container" id="Dior">
                 <?php foreach (array_slice($descriptionParts, 6, 2) as $part) : ?>
                     <p class="houses_third_text"><?= $part ?></p>
                 <?php endforeach ?>
@@ -131,7 +131,7 @@
     <div class="width_container_isabelline">
         <div class="lux">
             <?php extract(FindById($link, 4)); ?>
-            <div class="lux_title_container">
+            <div class="lux_title_container" id="H&M">
                 <h3><?= $title ?></h3>
                 <p><?= $author ?></p>
             </div>
@@ -161,10 +161,10 @@
         </div>
     </div>
     <div class="sec_lux">
-        <div class="sec_lux_first_container">
+        <div class="sec_lux_first_container" id="Supreme">
             <div class="sec_lux_first_text_container">
-                <?php foreach (array_slice($descriptionParts, 2, 3) as $part) : ?>
-                    <p class="sec_lux_first_text"><?= $part ?></p>
+                <?php foreach (array_slice($descriptionParts, 2, 3) as $key=>$part) : ?>
+                    <p class="sec_lux_first_text" <?php if ($key === 2) echo 'id="Balenciaga"' ?>><?= $part ?></p>
                 <?php endforeach ?>
             </div>
             <div class="swiper swiper_right">
@@ -202,7 +202,7 @@
             <h3><?= $title ?></h3>
             <div class="fashion_and_pop_container">
                 <div class="fashion_and_pop_left_container">
-                    <div class="fashion_and_pop_left_text_container">
+                    <div class="fashion_and_pop_left_text_container" id="Moschino">
                         <?php foreach (array_slice($descriptionParts, 0, 2) as $part) : ?>
                             <p class="fashion_and_pop_left_text"><?= $part ?></p>
                         <?php endforeach ?>
@@ -220,7 +220,7 @@
                             <img src="<?= $part ?>" alt="">
                         <?php endforeach ?>
                     </div>
-                    <div class="fashion_and_pop_right_text_container">
+                    <div class="fashion_and_pop_right_text_container" id="Balmain">
                         <p class="fashion_and_pop_right_text"><?= $descriptionParts[2] ?></p>
                     </div>
                     <a href="/articles/pop_culture_fashion" class="link_for_button">

@@ -144,3 +144,28 @@ function closeDropdown() {
 document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) {
     dropDownList.onmouseleave = closeDropdown;
 });
+
+function scrollToSection(sectionId) {
+    const section = document.querySelector(sectionId);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+    }
+}
+
+function handleNavigation(sectionId) {
+    if (window.location.pathname === '/') {
+        window.location.hash = sectionId;
+        scrollToSection(sectionId);
+    } else {
+        window.location.href = `/${sectionId}`;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.pathname === '/' && window.location.hash) {
+        scrollToSection(window.location.hash);
+    }
+});
