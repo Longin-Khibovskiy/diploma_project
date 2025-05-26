@@ -10,8 +10,14 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
     <link rel="stylesheet" href="/stylesheet/index.css">
     <?php
-    $currentPage = preg_replace('/[^a-zA-Z0-9_\-\/]/', '', $_GET['page'] ?? '');
-    $cssPath = "stylesheet/{$currentPage}.css";
+    $page = $_GET['page'] ?? '';
+    $page = preg_replace('/[^a-zA-Z0-9_\-\/]/', '', $page);
+    if (is_dir("pages/{$page}") && is_dir("pages/{$page}.php")) $page .= '/index';
+    if (str_starts_with($page, 'admin/')) {
+        $subpage = basename($page);
+        $cssPath = "stylesheet/admin/{$subpage}.css";
+    } else $cssPath = "stylesheet/{$page}.css";
+
     if (file_exists($cssPath)) echo "<link rel='stylesheet' href='/{$cssPath}'>";
     ?>
     <link rel="stylesheet" href="/stylesheet/adaptive.css">
