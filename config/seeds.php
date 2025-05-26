@@ -74,6 +74,7 @@ $sql = "CREATE TABLE IF NOT EXISTS Users (
     email VARCHAR(255) UNIQUE NOT NULL,
     username VARCHAR(50) UNIQUE NOT NULL,
     password_hash VARCHAR(255) NOT NULL,
+    `role` VARCHAR(255) DEFAULT 'user',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )";
 NewTable($conn, $sql, 'Users');
@@ -91,7 +92,7 @@ NewTable($conn, $sql, 'SavedArticles');
 
 ## Вставляем данные админа в таблицу Users
 $password_hash = password_hash('1q2w3e4r5t6y', PASSWORD_BCRYPT);
-$sql_admin = "INSERT INTO Users (email, username, password_hash) VALUES ('admin@collaboration.com', 'admin', '$password_hash')";
+$sql_admin = "INSERT INTO Users (email, username, password_hash, `role`) VALUES ('admin@collaboration.com', 'admin', '$password_hash', 'admin')";
 if (!$conn->query($sql_admin)) {
     echo "Ошибка вставки админа в Users: " . $conn->error . "\n";
 }
