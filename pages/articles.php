@@ -23,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_article'])) {
         if ($action === 'save') $sql = "INSERT INTO SavedArticles (user_id, article_id) VALUES (?, ?)";
         else $sql = "DELETE FROM SavedArticles WHERE user_id = ? AND article_id = ?";
 
-        // Выполняем запрос
         $stmt = $link->prepare($sql);
         $stmt->bind_param('ii', $userId, $articleId);
         if (!$stmt->execute()) throw new Exception('Ошибка базы данных');
