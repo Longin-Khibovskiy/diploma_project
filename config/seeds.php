@@ -126,7 +126,7 @@ foreach ($pagesData as $data) {
 $imageConfig = [
     'img_fashion_and_collaboration' => ['start' => 1, 'end' => 12, 'step' => 1, 'path' => 'fashion_and_collaboration', 'prefix' => 'fashion_and_collaboration'],
     'img_luxury_and_mass_market' => ['start' => 10, 'end' => 0, 'step' => -1, 'path' => 'luxury_and_mass_market', 'prefix' => 'luxury_and_mass_market'],
-    'img_fashion_and_pop_culture' => ['start' => 0, 'end' => 11, 'step' => 1, 'path' => 'fashion_and_pop_culture', 'prefix' => 'fashion_and_pop_culture'],
+    'img_fashion_and_pop_culture' => ['start' => 1, 'end' => 11, 'step' => 1, 'path' => 'fashion_and_pop_culture', 'prefix' => 'fashion_and_pop_culture'],
 
     'img_collaboration_what' => ['start' => 4, 'end' => 0, 'step' => -1, 'path' => 'home_articles_images/collaboration_what', 'prefix' => 'collaboration_what'],
     'art_and_fashion' => ['start' => 0, 'end' => 3, 'step' => 1, 'path' => 'home_articles_images/art_and_fashion', 'prefix' => 'art_and_fashion'],

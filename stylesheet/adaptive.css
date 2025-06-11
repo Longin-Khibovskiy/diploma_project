@@ -37,7 +37,7 @@
         display: none;
     }
 
-    .pop_culture_header_left_container img {
+    .pop_culture_header_left_container video {
         width: 60%;
     }
 
@@ -204,7 +204,7 @@
     }
 
     /*  Fashion and pop culture  */
-    .pop_culture_header_left_container img {
+    .pop_culture_header_left_container video {
         width: 70%;
     }
 
@@ -541,7 +541,7 @@
     }
 
     /*  Fashion and pop culture  */
-    .pop_culture_header_left_container img {
+    .pop_culture_header_left_container video {
         width: 90%;
     }
 
