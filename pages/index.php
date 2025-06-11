@@ -25,7 +25,7 @@
     endif;
     ?>
     <div class="home_video">
-        <img src="../images/video.png" alt="">
+        <video src="../video/main.mp4" autoplay loop muted></video>
     </div>
     <div class="first_description_home_page_container">
         <p class="first_description_home_page">Модных тандемов сегодня настолько много, что пора заводить на них уже
@@ -99,7 +99,7 @@
                     <p class="houses_first_text"><?= $part ?></p>
                 <?php endforeach ?>
             </div>
-            <img src="<?= $imagesParts[0] ?>" alt="">
+            <video src="../video/fashion_house_1.mp4" autoplay loop muted></video>
         </div>
         <div class="houses_imgs_container">
             <?php foreach (array_slice($imagesParts, 1, 2) as $part) : ?>
@@ -107,7 +107,7 @@
             <?php endforeach ?>
         </div>
         <div class="house_second_container">
-            <img src="<?= $imagesParts[3] ?>" alt="" class="house_second_img">
+            <video src="../video/fashion_house_2.mp4" autoplay loop muted class="house_second_img"></video>
             <div class="house_second_text_container">
                 <?php foreach (array_slice($descriptionParts, 3, 3) as $part) : ?>
                     <p class="houses_second_text"><?= $part ?></p>
@@ -125,7 +125,7 @@
             <?php endforeach ?>
         </div>
         <div class="house_last_container">
-            <img src="<?= $imagesParts[6] ?>" alt="">
+            <video src="../video/fashion_house_3.mp4" autoplay loop muted></video>
         </div>
     </div>
     <div class="width_container_isabelline">
@@ -163,16 +163,16 @@
     <div class="sec_lux">
         <div class="sec_lux_first_container" id="Supreme">
             <div class="sec_lux_first_text_container">
-                <?php foreach (array_slice($descriptionParts, 2, 3) as $key=>$part) : ?>
+                <?php foreach (array_slice($descriptionParts, 2, 3) as $key => $part) : ?>
                     <p class="sec_lux_first_text" <?php if ($key === 2) echo 'id="Balenciaga"' ?>><?= $part ?></p>
                 <?php endforeach ?>
             </div>
             <div class="swiper swiper_right">
                 <div class="swiper-wrapper">
                     <?php foreach (array_slice($imagesParts, 6, 5) as $part) : ?>
-                    <div class="swiper-slide post">
-                        <img src="<?= $part ?>" alt="" class="post-img">
-                    </div>
+                        <div class="swiper-slide post">
+                            <img src="<?= $part ?>" alt="" class="post-img">
+                        </div>
                     <?php endforeach ?>
                 </div>
                 <div class="swiper-scrollbar"></div>

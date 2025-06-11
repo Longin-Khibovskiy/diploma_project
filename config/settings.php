@@ -65,7 +65,8 @@ function FindById($link, $id)
         'title' => htmlspecialchars($row['title'] ?? ''),
         'author' => htmlspecialchars($row['author'] ?? ''),
         'descriptionParts' => array_map('trim', array_filter(explode('/', $row['description'] ?? ''))),
-        'imagesParts' => array_map('trim', array_filter(explode(',', $row['images'] ?? '')))
+        'imagesParts' => array_map('trim', array_filter(explode(',', $row['images'] ?? ''))),
+        'videosParts' => array_map('trim', array_filter(explode(',', $row['video'] ?? '')))
     ];
 }
 
